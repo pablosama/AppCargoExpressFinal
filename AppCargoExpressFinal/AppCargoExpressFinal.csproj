@@ -45,20 +45,68 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="PCLCrypto, Version=0.5.0.0, Culture=neutral, PublicKeyToken=d4421c8a4786956c, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLCrypto.0.5.0.14108\lib\monoandroid\PCLCrypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PCLCrypto.Abstractions, Version=0.5.0.0, Culture=neutral, PublicKeyToken=d4421c8a4786956c, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLCrypto.0.5.0.14108\lib\monoandroid\PCLCrypto.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Json" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Validation, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Validation.2.0.4.14103\lib\portable-windows8+net40+sl5+wp8+wpa81+wp81+MonoAndroid+MonoTouch\Validation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Auth, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Auth.1.3.1.1\lib\MonoAndroid10\Xamarin.Auth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="AuthService.cs" />
+    <Compile Include="controller\AwardedCargoesActivity.cs" />
+    <Compile Include="controller\LoginUserActivity.cs" />
+    <Compile Include="controller\MainActivity.cs" />
+    <Compile Include="controller\MainHistoricalActivity.cs" />
+    <Compile Include="controller\PerformedCargoesActivity.cs" />
+    <Compile Include="controller\PerformedCargoesAdapter.cs" />
+    <Compile Include="controller\PreSelectRegisterActivity.cs" />
+    <Compile Include="controller\UserRegisterActivity.cs" />
+    <Compile Include="models\PerformedCagoes.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
+    <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\AwardedCargoes.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LoginUser.axml" />
+    <AndroidResource Include="Resources\layout\MainHistorical.axml" />
+    <AndroidResource Include="Resources\layout\PerformedCargoes.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PerformedCargoesMain.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PreSelectionRegister.axml" />
+    <AndroidResource Include="Resources\layout\SearchCargoes.axml" />
+    <AndroidResource Include="Resources\layout\UserRegister.axml" />
+    <AndroidResource Include="Resources\layout\PerformedCargoesHeader.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PerformedCargoesFooter.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -73,6 +121,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\camionero.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cargoExpress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\userIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

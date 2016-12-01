@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30sp" />
+    <TextView
+        android:text="Menú de Historial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblMhMainTitle"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Button
+        android:text="Cargas Adjudicadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMhAwardedCargoes" />
+    <Button
+        android:text="Cargas Realizadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMhPerformedCargoes" />
+    <Button
+        android:text="Ver Reputación"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMhSeeRank" />
+    <Button
+        android:text="Volver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMhReturn" />
+</LinearLayout>

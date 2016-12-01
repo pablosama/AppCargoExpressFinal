@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30sp" />
+    <TextView
+        android:text="APP CARGO EXPRESS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPSRWelcomeUser"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50sp" />
+    <TextView
+        android:text="Registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblPSRRegister"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/psrSpc2"
+        android:minHeight="15sp" />
+    <TextView
+        android:text="¿Que tipo de usuario eres?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblPSRtypeOfUser"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spcPSR3"
+        android:minHeight="5sp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:id="@+id/btnPSRUser"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/userIcon"
+            android:padding="1dp" />
+        <Button
+            android:background="@drawable/camionero"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:id="@+id/btnPSRCarrier"
+            android:layout_marginLeft="20dp" />
+    </LinearLayout>
+  <Space
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/spcPSR3"
+       android:minHeight="5sp" />
+    <TextView
+        android:text="Seleccione un tipo de registro (una de las imágenes)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblPSRSelectUserMsg"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spcPSR3"
+        android:minHeight="15sp" />
+    <Button
+        android:text="Ingresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPSRIngresar" />
+    <Button
+        android:text="Volver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPSRReturn" />
+</LinearLayout>

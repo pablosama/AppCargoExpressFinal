@@ -3,5 +3,108 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:backgroundTint="#00000000">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30sp" />
+    <TextView
+        android:text="APP CARGO EXPRESS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMWelcomeUser"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <ImageView
+        android:src="@drawable/cargoexpress"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imgMView1"
+        android:layout_marginLeft="90dp" />
+    <TextView
+        android:text="Usuario:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblMUser"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <EditText
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMUserName"
+        android:shadowColor="#f0f8ffff"
+        android:hint="UserName"
+        android:background="#808080"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <TextView
+        android:text="Clave:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblMPass"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMPassword"
+        android:hint="ExamplePass"
+        android:background="#808080"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <CheckBox
+        android:text="Recordarme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkMRecord"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tblMLayout1">
+        <TableRow
+            android:id="@+id/tblMRow1">
+            <TextView
+                android:text="Registrarse"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblMRegister"
+                android:layout_marginRight="100dp"
+                android:textColor="#0000FF"
+                android:layout_marginLeft="30dp"
+                android:onClick="RegisterOnClick"
+                android:clickable="true" />
+            <TextView
+                android:text="Recordar Clave"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMReset"
+                android:textColor="#0000FF" />
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:id="@+id/btnMLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Login"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <Button
+        android:id="@+id/btnMLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Exit"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
 </LinearLayout>

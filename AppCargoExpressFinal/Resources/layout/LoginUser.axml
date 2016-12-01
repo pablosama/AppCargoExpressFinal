@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:textAlignment="inherit">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30sp" />
+    <TextView
+        android:text="Bienvenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLUAWelcomeUser"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Button
+        android:text="Modificar Registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLUAModifyRegister" />
+    <Button
+        android:text="Publicar Carga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLUAPublishCargo" />
+    <Button
+        android:text="Publicar Viaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLUAPublishTravel" />
+    <Button
+        android:text="Historial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLUAHistorical" />
+    <Button
+        android:text="Volver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLUAReturn" />
+</LinearLayout>

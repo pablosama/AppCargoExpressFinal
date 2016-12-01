@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="inherit"
+    android:weightSum="100">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30sp" />
+    <TextView
+        android:text="número de operación"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblPcNumOperation"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <TextView
+        android:text="fecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblPcDateList"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <TextView
+        android:text="origen - destino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblPcOriginDestiny"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+</LinearLayout>
