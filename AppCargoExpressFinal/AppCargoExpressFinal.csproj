@@ -101,10 +101,10 @@
     <AndroidResource Include="Resources\layout\PreSelectionRegister.axml" />
     <AndroidResource Include="Resources\layout\SearchCargoes.axml" />
     <AndroidResource Include="Resources\layout\UserRegister.axml" />
-    <AndroidResource Include="Resources\layout\PerformedCargoesHeader.axml">
+    <AndroidResource Include="Resources\layout\CargoesHeader.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\PerformedCargoesFooter.axml">
+    <AndroidResource Include="Resources\layout\CargoesFooter.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

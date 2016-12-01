@@ -37,22 +37,26 @@ namespace AppCargoExpressFinal.controller
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.PerformedCargoesMain);
-            // Create your application here
+
             typeOfUser = Intent.GetIntExtra("TypeOfUser", 1);
 
             mListView = FindViewById<ListView>(Resource.Id.lstPcPerformed);
-            //btnVolver = FindViewById<Button>(Resource.Id.btnPcfReturn);
 
             LayoutInflater inflater = (LayoutInflater)this.GetSystemService(Context.LayoutInflaterService);
-            View headerView = inflater.Inflate(Resource.Layout.PerformedCargoesHeader, null);
-            View footerView = inflater.Inflate(Resource.Layout.PerformedCargoesFooter, null);
+            View headerView = inflater.Inflate(Resource.Layout.CargoesHeader, null);
+            TextView lblTextHeader = (TextView)headerView.FindViewById<TextView>(Resource.Id.lblChTitleList);
+            lblTextHeader.SetText(Resource.String.PerformedCargoesTitle);
+
+            View footerView = inflater.Inflate(Resource.Layout.CargoesFooter, null);
             PerformedCargoesAdapter adapter = new PerformedCargoesAdapter(this, mItems);
             mListView.AddHeaderView(headerView);
             mListView.AddFooterView(footerView);
             mListView.Adapter = adapter;
 
+            //var texview = FindViewById<TextView>(Resource.Id.lblChTitleList);
+            //texview.Text = "Cargas Realizadas";
 
-            btnVolver = FindViewById<Button>(Resource.Id.btnPcfReturn);
+            btnVolver = FindViewById<Button>(Resource.Id.btnCfReturn);
             btnVolver.Click += delegate
             {
                 Intent nextScreen = new Intent(this, typeof(MainHistoricalActivity));

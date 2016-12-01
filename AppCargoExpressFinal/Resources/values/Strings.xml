@@ -6,6 +6,8 @@
 
   <string name="app_name">MyAndroidApp</string>
   <string name="country_prompt">Choose a country</string>
+  <string name="AwardedCargoesTitle">Historial Cargas Adjudicadas</string>
+  <string name="PerformedCargoesTitle">Historial Cargas Realizadas</string>
 
   <string-array name="country_arrays">
     <item>Malaysia</item>

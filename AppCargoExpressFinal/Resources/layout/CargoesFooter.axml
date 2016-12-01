@@ -11,5 +11,5 @@
        android:text="Volver"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:id="@+id/btnPcfReturn" />
+       android:id="@+id/btnCfReturn" />
 </LinearLayout>

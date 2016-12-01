@@ -17,7 +17,8 @@ namespace AppCargoExpressFinal.controller
     {
         private List<string> mItems;
         private ListView mListView;
-        private TextView listTitle;
+        private Button btnVolver;
+        private int typeOfUser;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -25,14 +26,30 @@ namespace AppCargoExpressFinal.controller
 
             SetContentView(Resource.Layout.AwardedCargoes);
             mListView = FindViewById<ListView>(Resource.Id.lstAc);
-            //listTitle = (View)getLayoutInflater().inflate(Resource.Id.lblAcTitle, null);// FindViewById<TextView>(Resource.Id.lblAcTitle);
+            typeOfUser = Intent.GetIntExtra("TypeOfUser", 1);
 
-            //ViewGroup header = (ViewGroup)inflater.inflate(R.layout.header, myListView, false);
+            LayoutInflater inflater = (LayoutInflater)this.GetSystemService(Context.LayoutInflaterService);
+
+            View headerView = inflater.Inflate(Resource.Layout.CargoesHeader, null);
+            TextView lblTextHeader = (TextView)headerView.FindViewById<TextView>(Resource.Id.lblChTitleList);
+            lblTextHeader.SetText(Resource.String.AwardedCargoesTitle);
+
+            View footerView = inflater.Inflate(Resource.Layout.CargoesFooter, null);
 
             mItems = new List<string> { "viaje N°1", "viaje N°2", "viaje N°3", "viaje N°4", "viaje N°5", "viaje N°6" };
             ArrayAdapter<string> adapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, mItems);
-            //mListView.AddHeaderView(listTitle);       
+
+            mListView.AddHeaderView(headerView);
+            mListView.AddFooterView(footerView);
             mListView.Adapter = adapter;
+
+            btnVolver = FindViewById<Button>(Resource.Id.btnCfReturn);
+            btnVolver.Click += delegate
+            {
+                Intent nextScreen = new Intent(this, typeof(MainHistoricalActivity));
+                nextScreen.PutExtra("TypeOfUser", typeOfUser);
+                StartActivity(nextScreen);
+            };
         }
     }
 }
