@@ -76,8 +76,10 @@
     <Compile Include="controller\PerformedCargoesActivity.cs" />
     <Compile Include="controller\PerformedCargoesAdapter.cs" />
     <Compile Include="controller\PreSelectRegisterActivity.cs" />
+    <Compile Include="controller\SearchCargoesActivity.cs" />
     <Compile Include="controller\UserRegisterActivity.cs" />
-    <Compile Include="models\PerformedCagoes.cs" />
+    <Compile Include="DataModels\DataModels.cs" />
+    <Compile Include="models\PerformedCargoes.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -99,7 +101,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\PreSelectionRegister.axml" />
-    <AndroidResource Include="Resources\layout\SearchCargoes.axml" />
+    <AndroidResource Include="Resources\layout\SearchCargoes.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\UserRegister.axml" />
     <AndroidResource Include="Resources\layout\CargoesHeader.axml">
       <SubType>Designer</SubType>

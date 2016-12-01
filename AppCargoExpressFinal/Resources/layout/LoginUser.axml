@@ -35,6 +35,16 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnLUAPublishTravel" />
     <Button
+        android:text="Buscar Viaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLUASearchTravel" />
+    <Button
+        android:text="Buscar Carga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLUASearchCargo" />
+    <Button
         android:text="Historial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

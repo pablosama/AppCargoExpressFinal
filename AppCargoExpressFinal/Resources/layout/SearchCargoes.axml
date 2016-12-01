@@ -3,46 +3,80 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Space
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="15sp" />
-    <TextView
-        android:text="BÚSQUEDA DE VIAJE"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblScTitle"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:typeface="normal"
-        android:gravity="center" />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="15sp" />
-    <TextView
-        android:text="Seleccione Origen:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblScOrigin"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/country_arrays"
-        android:prompt="@string/country_prompt" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="15sp" />
+            <TextView
+                android:text="BÚSQUEDA DE VIAJE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblScTitle"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                android:gravity="center" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="15sp" />
+            <TextView
+                android:text="Seleccione Origen:"
+                android:textSize="17sp"
+                android:typeface="normal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblScOrigin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#FFFFFF" />
+            <Spinner
+                android:id="@+id/sprScOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp" />
+            <TextView
+                android:text="Seleccione Destino:"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="normal"
+                android:gravity="center"
+                android:id="@+id/lblScDestiny"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#FFFFFF"/>
+            <Spinner
+                android:id="@+id/sprScDestiny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp" />
+            <Button
+                android:text="Buscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnScSearch" />
+            <Button
+                android:text="Limpiar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnScClean" />
+            <Button
+                android:text="Volver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnScReturn" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

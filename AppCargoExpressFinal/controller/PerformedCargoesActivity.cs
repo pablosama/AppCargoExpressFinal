@@ -17,18 +17,18 @@ namespace AppCargoExpressFinal.controller
     public class PerformedCargoesActivity : Activity
     {
 
-        private List<PerformedCagoes> mItems = new List<PerformedCagoes>()
+        private List<PerformedCargoes> mItems = new List<PerformedCargoes>()
         {
-            new PerformedCagoes (1001,"05/11/2016","Pto. Montt - Santiago"),
-            new PerformedCagoes (1002,"06/11/2016","Santiago - Arica"),
-            new PerformedCagoes (1003,"07/11/2016","Coquimbo - Concepción"),
-            new PerformedCagoes (1004,"08/11/2016","Concepción - Temuco"),
-            new PerformedCagoes (1005,"15/11/2016","Temuco - Osorno"),
-            new PerformedCagoes (1006,"16/11/2016","Osorno - Lanco"),
-            new PerformedCagoes (1007,"17/11/2016","Lanco - Valdivia"),
-            new PerformedCagoes (1008,"18/11/2016","Valdivia - Pto. Montt"),
-            new PerformedCagoes (1009,"19/11/2016","Pto. Montt - Chiloé"),
-            new PerformedCagoes (10010,"20/11/2016","Pta. Arenas - Cohyaique")
+            new PerformedCargoes (1001,"05/11/2016","Pto. Montt - Santiago"),
+            new PerformedCargoes (1002,"06/11/2016","Santiago - Arica"),
+            new PerformedCargoes (1003,"07/11/2016","Coquimbo - Concepción"),
+            new PerformedCargoes (1004,"08/11/2016","Concepción - Temuco"),
+            new PerformedCargoes (1005,"15/11/2016","Temuco - Osorno"),
+            new PerformedCargoes (1006,"16/11/2016","Osorno - Lanco"),
+            new PerformedCargoes (1007,"17/11/2016","Lanco - Valdivia"),
+            new PerformedCargoes (1008,"18/11/2016","Valdivia - Pto. Montt"),
+            new PerformedCargoes (1009,"19/11/2016","Pto. Montt - Chiloé"),
+            new PerformedCargoes (10010,"20/11/2016","Pta. Arenas - Cohyaique")
         };
         private ListView mListView;
         private Button btnVolver;

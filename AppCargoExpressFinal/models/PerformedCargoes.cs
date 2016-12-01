@@ -12,14 +12,14 @@ using Android.Widget;
 
 namespace AppCargoExpressFinal.models
 {
-    public class PerformedCagoes
+    public class PerformedCargoes
     {
 
         private int numeroOperacion;
         private string fecha;
         private string origenDestino;
         
-        public PerformedCagoes(int numeroOperacion, string fecha, string origenDestino)
+        public PerformedCargoes(int numeroOperacion, string fecha, string origenDestino)
         {
             this.numeroOperacion = numeroOperacion;
             this.fecha = fecha;

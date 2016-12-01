@@ -1,207 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-  <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:minWidth="25px"
-      android:minHeight="25px">
-    <TextView
-        android:text="Formulario Creación Usuario"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:typeface="normal"
-        android:gravity="center" />
-    <TextView
-        android:text="Nombre:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblURuserName"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <EditText
-        android:inputType="text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtURuserName"
-        android:shadowColor="#f0f8ffff"
-        android:hint="nombre"
-        android:background="#808080"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <TextView
-        android:text="Apellido:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblURuserLastName"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <EditText
-        android:inputType="text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtURuserLastName"
-        android:shadowColor="#f0f8ffff"
-        android:hint="apellido"
-        android:background="#808080"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <TextView
-        android:text="Alias:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblURAlias"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <EditText
-        android:inputType="text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtURAlias"
-        android:shadowColor="#f0f8ffff"
-        android:hint="alias"
-        android:background="#808080"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <TextView
-        android:text="Teléfono Móvil:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblURPhone"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <EditText
-        android:inputType="text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtURPhone"
-        android:shadowColor="#f0f8ffff"
-        android:hint="98765432"
-        android:background="#808080"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <TextView
-        android:text="Código Area:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblURCodArea"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <EditText
-        android:inputType="text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtURCodArea"
-        android:shadowColor="#f0f8ffff"
-        android:hint="98765432"
-        android:background="#808080"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <TextView
-        android:text="Teléfono fijo:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblURPhone2"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <EditText
-        android:inputType="text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtURPhone2"
-        android:shadowColor="#f0f8ffff"
-        android:hint="045535353"
-        android:background="#808080"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <TextView
-        android:text="Email:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblURMail"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <EditText
-        android:inputType="text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtURMail"
-        android:shadowColor="#f0f8ffff"
-        android:hint="correo@gmail.com"
-        android:background="#808080"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <TextView
-        android:text="Dirección:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblURAddress"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <EditText
-        android:inputType="text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtURAddress"
-        android:shadowColor="#f0f8ffff"
-        android:hint="Antonio Varas #989"
-        android:background="#808080"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <TextView
-        android:text="Comuna:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblURComuna"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-    <EditText
-        android:inputType="text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtURComuna"
-        android:shadowColor="#f0f8ffff"
-        android:hint="Temuco"
-        android:background="#808080"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-      <Space
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:minHeight="15sp" />
-    <Button
-        android:text="Registrar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnURRegister" />
-    <Button
-        android:text="Volver al menú principal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnURReturn" />
-    </LinearLayout>
-  </ScrollView>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:text="Formulario Creación Usuario"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                android:gravity="center" />
+            <TextView
+                android:text="Nombre:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblURuserName"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURuserName"
+                android:shadowColor="#f0f8ffff"
+                android:hint="nombre"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:text="Apellido:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblURuserLastName"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURuserLastName"
+                android:shadowColor="#f0f8ffff"
+                android:hint="apellido"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:text="Alias:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblURAlias"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURAlias"
+                android:shadowColor="#f0f8ffff"
+                android:hint="alias"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:text="Teléfono Móvil:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblURPhone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURPhone"
+                android:shadowColor="#f0f8ffff"
+                android:hint="98765432"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:text="Código Area:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblURCodArea"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURCodArea"
+                android:shadowColor="#f0f8ffff"
+                android:hint="98765432"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:text="Teléfono fijo:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblURPhone2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURPhone2"
+                android:shadowColor="#f0f8ffff"
+                android:hint="045535353"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:text="Email:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblURMail"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURMail"
+                android:shadowColor="#f0f8ffff"
+                android:hint="correo@gmail.com"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:text="Dirección:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblURAddress"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURAddress"
+                android:shadowColor="#f0f8ffff"
+                android:hint="Antonio Varas #989"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:text="Comuna:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblURComuna"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURComuna"
+                android:shadowColor="#f0f8ffff"
+                android:hint="Temuco"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="15sp" />
+            <Button
+                android:text="Registrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnURRegister" />
+            <Button
+                android:text="Volver al menú principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnURReturn" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

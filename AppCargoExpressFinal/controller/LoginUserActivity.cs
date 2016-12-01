@@ -20,6 +20,8 @@ namespace AppCargoExpressFinal.controller
         private Button btnPublicarViaje;
         private Button btnHistorial;
         private TextView txtWelcomeUser;
+        private Button btnBuscarViaje;
+        private Button btnBuscarCarga;
         
         private int typeOfUser;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -43,18 +45,37 @@ namespace AppCargoExpressFinal.controller
             btnPublicarCarga = FindViewById<Button>(Resource.Id.btnLUAPublishCargo);
             btnPublicarViaje = FindViewById<Button>(Resource.Id.btnLUAPublishTravel);
             btnHistorial = FindViewById<Button>(Resource.Id.btnLUAHistorical);
+            btnBuscarViaje = FindViewById<Button>(Resource.Id.btnLUASearchTravel);
+            btnBuscarCarga = FindViewById<Button>(Resource.Id.btnLUASearchCargo);
 
             btnVolver.Click += BtnVolver_Click;
             btnModificarRegistro.Click += BtnModificarRegistro_Click;
             btnPublicarCarga.Click += BtnPublicarCarga_Click;
             btnPublicarViaje.Click += BtnPublicarViaje_Click;
+            btnBuscarViaje.Click += BtnBuscarViaje_Click;
+            btnBuscarCarga.Click += BtnBuscarCarga_Click;
             btnHistorial.Click += BtnHistorial_Click;
+        }
+
+        private void BtnBuscarCarga_Click(object sender, EventArgs e)
+        {
+            Intent nextScreen = new Intent(this, typeof(SearchCargoesActivity));
+            nextScreen.PutExtra("TypeOfUser", typeOfUser);
+            StartActivity(nextScreen);
+        }
+
+        private void BtnBuscarViaje_Click(object sender, EventArgs e)
+        {
+            Intent nextScreen = new Intent(this, typeof(SearchCargoesActivity));
+            nextScreen.PutExtra("TypeOfUser", typeOfUser);
+            StartActivity(nextScreen);
         }
 
         private void BtnHistorial_Click(object sender, EventArgs e)
         {
             //todo: add userType
             Intent nextScreen = new Intent(this, typeof(MainHistoricalActivity));
+            nextScreen.PutExtra("TypeOfUser", typeOfUser);
             StartActivity(nextScreen);
         }
 
@@ -88,9 +109,11 @@ namespace AppCargoExpressFinal.controller
             {
                 case 1:
                     btnPublicarViaje.Visibility = ViewStates.Gone;
+                    btnBuscarViaje.Visibility = ViewStates.Gone;
                     break;
                 case 2:
                     btnPublicarCarga.Visibility = ViewStates.Gone;
+                    btnBuscarCarga.Visibility = ViewStates.Gone;
                     break;
                 case 3:
                     //here put admin buttons  

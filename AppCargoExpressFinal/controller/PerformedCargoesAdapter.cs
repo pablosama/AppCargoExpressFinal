@@ -13,12 +13,12 @@ using AppCargoExpressFinal.models;
 
 namespace AppCargoExpressFinal.controller
 {
-    public class PerformedCargoesAdapter : BaseAdapter<models.PerformedCagoes>
+    public class PerformedCargoesAdapter : BaseAdapter<models.PerformedCargoes>
     {
-        private List<models.PerformedCagoes> mItems;
+        private List<models.PerformedCargoes> mItems;
         private Context mContext;
        
-        public PerformedCargoesAdapter(Context context, List<models.PerformedCagoes> items)
+        public PerformedCargoesAdapter(Context context, List<models.PerformedCargoes> items)
         {
             mItems = items;
             mContext = context;
@@ -32,7 +32,7 @@ namespace AppCargoExpressFinal.controller
             }
         }
 
-        public override PerformedCagoes this[int position]
+        public override PerformedCargoes this[int position]
         {
             get
             {
