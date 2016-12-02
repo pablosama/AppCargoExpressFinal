@@ -13,7 +13,7 @@ using AppCargoExpressFinal.models;
 
 namespace AppCargoExpressFinal.controller
 {
-    [Activity(Label = "PerformedCargoesActivity")]
+    [Activity(Label = "PerformedCargoesActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class PerformedCargoesActivity : Activity
     {
 
@@ -38,7 +38,7 @@ namespace AppCargoExpressFinal.controller
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.PerformedCargoesMain);
 
-            typeOfUser = Intent.GetIntExtra("TypeOfUser", 1);
+            typeOfUser = int.Parse(AuthService.UserType);
 
             mListView = FindViewById<ListView>(Resource.Id.lstPcPerformed);
 
@@ -59,8 +59,7 @@ namespace AppCargoExpressFinal.controller
             btnVolver = FindViewById<Button>(Resource.Id.btnCfReturn);
             btnVolver.Click += delegate
             {
-                Intent nextScreen = new Intent(this, typeof(MainHistoricalActivity));
-                nextScreen.PutExtra("TypeOfUser", typeOfUser);
+                Intent nextScreen = new Intent(this, typeof(MainHistoricalActivity));               
                 StartActivity(nextScreen);
             };
 

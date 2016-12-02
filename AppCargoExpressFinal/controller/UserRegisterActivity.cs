@@ -13,19 +13,26 @@ using System.Threading;
 
 namespace AppCargoExpressFinal.controller
 {
-    [Activity(Label = "UserRegisterActivity")]
+    [Activity(Label = "UserRegisterActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class UserRegisterActivity : Activity
     {
         private Button btnRegister;
         private Button btnReturn;
         private ProgressDialog progressBar;
+        private Spinner spnUrCity;
+        private int typeOfUser;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.UserRegister);
-            // Create your application here
-            btnRegister = FindViewById<Button>(Resource.Id.btnURRegister);
-            btnReturn = FindViewById<Button>(Resource.Id.btnURReturn);
+            // Create your application here         
+            btnRegister = FindViewById<Button>(Resource.Id.btnUrRegister);
+            btnReturn = FindViewById<Button>(Resource.Id.btnUrReturn);
+            spnUrCity = FindViewById<Spinner>(Resource.Id.sprUrCity);
+            ArrayAdapter<string> cityAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, DataModels.DataModels.Cities);
+            cityAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            spnUrCity.Adapter = cityAdapter;
 
             btnRegister.Click += BtnRegister_Click;
             btnReturn.Click += BtnReturn_Click;

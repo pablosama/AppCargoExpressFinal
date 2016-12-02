@@ -13,7 +13,7 @@ using Android.Graphics;
 
 namespace AppCargoExpressFinal.controller
 {
-    [Activity(Label = "PreSelectRegisterActivity")]
+    [Activity(Label = "PreSelectRegisterActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class PreSelectRegisterActivity : Activity
     {
         private Button btnUser;

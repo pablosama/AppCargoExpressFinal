@@ -11,7 +11,7 @@ using Android.Widget;
 
 namespace AppCargoExpressFinal.controller
 {
-    [Activity(Label = "LoginUser")]
+    [Activity(Label = "LoginUser", Theme = "@android:style/Theme.NoTitleBar")]
     public class LoginUserActivity : Activity
     {
         private Button btnVolver;
@@ -36,9 +36,9 @@ namespace AppCargoExpressFinal.controller
 
         private void InitComponents()
         {
-            typeOfUser = Intent.GetIntExtra("TypeOfUser", 1);
+            typeOfUser = int.Parse(AuthService.UserType);
             txtWelcomeUser = FindViewById<TextView>(Resource.Id.txtLUAWelcomeUser);
-            txtWelcomeUser.Text = txtWelcomeUser.Text + " " + Intent.GetStringExtra("userName") ?? "Default User";
+            txtWelcomeUser.Text = txtWelcomeUser.Text + " " + AuthService.Name ?? "Desconocido";
 
             btnVolver = FindViewById<Button>(Resource.Id.btnLUAReturn);
             btnModificarRegistro = FindViewById<Button>(Resource.Id.btnLUAModifyRegister);
@@ -59,23 +59,19 @@ namespace AppCargoExpressFinal.controller
 
         private void BtnBuscarCarga_Click(object sender, EventArgs e)
         {
-            Intent nextScreen = new Intent(this, typeof(SearchCargoesActivity));
-            nextScreen.PutExtra("TypeOfUser", typeOfUser);
+            Intent nextScreen = new Intent(this, typeof(SearchCargoesActivity));            
             StartActivity(nextScreen);
         }
 
         private void BtnBuscarViaje_Click(object sender, EventArgs e)
         {
-            Intent nextScreen = new Intent(this, typeof(SearchCargoesActivity));
-            nextScreen.PutExtra("TypeOfUser", typeOfUser);
+            Intent nextScreen = new Intent(this, typeof(SearchCargoesActivity));          
             StartActivity(nextScreen);
         }
 
         private void BtnHistorial_Click(object sender, EventArgs e)
         {
-            //todo: add userType
-            Intent nextScreen = new Intent(this, typeof(MainHistoricalActivity));
-            nextScreen.PutExtra("TypeOfUser", typeOfUser);
+            Intent nextScreen = new Intent(this, typeof(MainHistoricalActivity));           
             StartActivity(nextScreen);
         }
 
@@ -96,7 +92,6 @@ namespace AppCargoExpressFinal.controller
 
         private void BtnVolver_Click(object sender, EventArgs e)
         {
-            //var main = new MainActivity();
             AuthService.DeleteCredentials();
 
             Intent nextScreen = new Intent(this, typeof(MainActivity));

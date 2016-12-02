@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace AppCargoExpressFinal.controller
 {
-    [Activity(Label = "AwardedCargoesActivity")]
+    [Activity(Label = "AwardedCargoesActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class AwardedCargoesActivity : Activity
     {
         private List<string> mItems;
@@ -26,7 +26,7 @@ namespace AppCargoExpressFinal.controller
 
             SetContentView(Resource.Layout.AwardedCargoes);
             mListView = FindViewById<ListView>(Resource.Id.lstAc);
-            typeOfUser = Intent.GetIntExtra("TypeOfUser", 1);
+            typeOfUser = int.Parse(AuthService.UserType);
 
             LayoutInflater inflater = (LayoutInflater)this.GetSystemService(Context.LayoutInflaterService);
 
@@ -46,8 +46,7 @@ namespace AppCargoExpressFinal.controller
             btnVolver = FindViewById<Button>(Resource.Id.btnCfReturn);
             btnVolver.Click += delegate
             {
-                Intent nextScreen = new Intent(this, typeof(MainHistoricalActivity));
-                nextScreen.PutExtra("TypeOfUser", typeOfUser);
+                Intent nextScreen = new Intent(this, typeof(MainHistoricalActivity));               
                 StartActivity(nextScreen);
             };
         }

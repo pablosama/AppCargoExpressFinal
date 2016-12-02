@@ -29,9 +29,38 @@ namespace AppCargoExpressFinal
             get
             {
                 var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["Password"] :null;
+            }
+        }
+
+        public static string Name
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["Name"] : null;
+            }
+        }
+
+        public static string UserType
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["UserType"] : "0";
+            }
+        }
+
+        public static string value
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
                 return (account != null) ? account.Properties["Password"] : null;
             }
         }
+
+
 
         public static void DeleteCredentials()
         {
@@ -42,15 +71,17 @@ namespace AppCargoExpressFinal
             }
         }
 
-        public static void SaveCredentials(string userName, string password)
+        public static void SaveCredentials(string userName, string password,string name,int userType)
         {
-            if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(password))
+            if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(password) && userType > 0)
             {
                 Account account = new Account
                 {
                     Username = userName
                 };
                 account.Properties.Add("Password", password);
+                account.Properties.Add("Name", name);
+                account.Properties.Add("UserType", userType.ToString());
                 AccountStore.Create(Application.Context).Save(account, Application.Context.ToString());
             }
         }

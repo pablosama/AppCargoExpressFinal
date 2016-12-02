@@ -12,8 +12,95 @@ using Android.Widget;
 
 namespace AppCargoExpressFinal.DataModels
 {
-    public static class DataModels
+    public class DataModels
     {
+
+        public class Usuario
+        {
+            public string alias { get; set; }
+            public string nombre { get; set; }
+            public string apellido { get; set; }
+            public int tipoUsuario { get; set; }
+            public string telefonoMovil { get; set; }
+            public string codigoArea { get; set; }
+            public string mail { get; set; }
+            public string comuna { get; set; }
+            public string direccion { get; set; }
+            public DateTime fechaCreacion { get; set; }
+            public DateTime fechaActualizacion { get; set; }
+            public string contrasena { get; set; }
+
+            public Usuario(string alias, string contrasena, string nombre, string apellido, int tipoUsuario, string telefonoMovil, string codigoArea, string mail, string comuna, string direccion, DateTime fechaCreacion, DateTime fechaActualizacion)
+            {
+                this.alias = alias;
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.tipoUsuario = tipoUsuario;
+                this.telefonoMovil = telefonoMovil;
+                this.codigoArea = codigoArea;
+                this.mail = mail;
+                this.comuna = comuna;
+                this.direccion = direccion;
+                this.fechaCreacion = fechaCreacion;
+                this.fechaActualizacion = fechaActualizacion;
+                this.contrasena = contrasena;
+            }
+        }
+
+
+
+        public List<Usuario> GetUsuarios()        
+        {
+            var usuarios = new List<Usuario> {
+            new Usuario("davalos","1234","Patrick","Arancibia",2,"98765432","+569","patrick.arancibia@gmail.com","Temuco","Dirección n°1",DateTime.Parse("2015-12-05"),DateTime.Parse("2016-06-05")),
+            new Usuario("minimi","1234","Hans","Rubio",1,"94764381","+569","hans.rubio@gmail.com","Talca","Dirección n°2",DateTime.Parse("2015-07-05"),DateTime.Parse("2016-04-03")),
+            new Usuario("undertaker","1234","David","Vasquez",1,"76543289","+569","david.vasquez@gmail.com","Coyhaique","Dirección n°3",DateTime.Parse("2015-08-01"),DateTime.Parse("2016-01-01")),
+            new Usuario("evita","Pablo","1234","Romero",2,"46798725","+569","pablo.romero@gmail.com","Curacautín","Dirección n°4",DateTime.Parse("2016-10-05"),DateTime.Parse("2016-11-25")),
+            new Usuario("jafar","Francisco","1234","Fernandez",2,"76543213","+569","francisco.fernandez@gmail.com","Traiguén","Dirección n°5",DateTime.Parse("2010-12-03"),DateTime.Parse("2016-03-08")),
+            new Usuario("palOtrolado","1234","Fernando","Lillo",1,"56781235","+569","fernando.lillo@gmail.com","Temuco","Dirección n°6",DateTime.Parse("2015-12-05"),DateTime.Parse("2016-06-05")),
+            new Usuario("pablosama","4321","Pablo","Pérez",2,"98765432","+569","pablo.perez@gmail.com","Lautaro","Dirección n°7",DateTime.Parse("2016-12-05"),DateTime.Parse("2016-12-02")),
+            new Usuario("huaso","1234","Angelo","Venegas",1,"65437891","+569","angelo.venegas@gmail.com","Purén","Dirección n°8",DateTime.Parse("2013-12-05"),DateTime.Parse("2016-01-08")),
+            new Usuario("skynner","1234","Jaime","Vargas",1,"23458764","+569","jaime.vargas@gmail.com","Temuco","Dirección n°9",DateTime.Parse("2015-12-05"),DateTime.Parse("2016-03-09")),
+            };
+            return usuarios;
+        }
+
+        public bool UserExist(string alias, string password)
+        {
+            return GetUsuarios().Any(x => x.alias == alias && x.contrasena == password);          
+        }
+
+        public Usuario GetUsuerio(string alias, string password)
+        {
+            return GetUsuarios().FirstOrDefault(x => x.alias == alias && x.contrasena == password);
+        }
+
+
+        public static List<string> CargoTypes = new List<string>
+        {
+            "Artículo Hogar",
+            "Mudanza",
+            "Vehículos Menores",
+            "Vehículos Mayores",
+            "Industial",
+            "Carga Peligrosa",
+            "Todas"
+        };
+
+        public static List<string> PriceRange = new List<string>
+        {
+            "$10.000 a $50.000",            
+            "$50.000 a $70.000",
+            "$70.000 a $100.000",
+            "$100.000 a $150.000",
+            "$150.000 a $200.000",
+            "$200.000 a $300.000",
+            "$300.000 a $400.000",
+            "$400.000 a $500.000",
+            "500.000 a $1.000.000",
+            "$1.000.000 o más",
+            "Cualquier Precio"
+        };
 
         public static List<string> Cities = new List<string>
         {

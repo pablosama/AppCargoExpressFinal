@@ -30,14 +30,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblURuserName"
+                android:id="@+id/lblUrUserName"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
             <EditText
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtURuserName"
+                android:id="@+id/txtUrUserName"
                 android:shadowColor="#f0f8ffff"
                 android:hint="nombre"
                 android:background="#808080"
@@ -48,14 +48,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblURuserLastName"
+                android:id="@+id/lblUrUserLastName"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
             <EditText
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtURuserLastName"
+                android:id="@+id/txtUrUserLastName"
                 android:shadowColor="#f0f8ffff"
                 android:hint="apellido"
                 android:background="#808080"
@@ -66,14 +66,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblURAlias"
+                android:id="@+id/lblUrAlias"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
             <EditText
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtURAlias"
+                android:id="@+id/txtUrAlias"
                 android:shadowColor="#f0f8ffff"
                 android:hint="alias"
                 android:background="#808080"
@@ -84,14 +84,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblURPhone"
+                android:id="@+id/lblUrPhone"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
             <EditText
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtURPhone"
+                android:id="@+id/txtUrPhone"
                 android:shadowColor="#f0f8ffff"
                 android:hint="98765432"
                 android:background="#808080"
@@ -102,14 +102,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblURCodArea"
+                android:id="@+id/lblUrCodArea"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
             <EditText
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtURCodArea"
+                android:id="@+id/txtUrCodArea"
                 android:shadowColor="#f0f8ffff"
                 android:hint="98765432"
                 android:background="#808080"
@@ -120,14 +120,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblURPhone2"
+                android:id="@+id/lblUrPhone2"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
             <EditText
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtURPhone2"
+                android:id="@+id/txtUrPhone2"
                 android:shadowColor="#f0f8ffff"
                 android:hint="045535353"
                 android:background="#808080"
@@ -138,14 +138,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblURMail"
+                android:id="@+id/lblUrMail"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
             <EditText
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtURMail"
+                android:id="@+id/txtUrMail"
                 android:shadowColor="#f0f8ffff"
                 android:hint="correo@gmail.com"
                 android:background="#808080"
@@ -156,14 +156,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblURAddress"
+                android:id="@+id/lblUrAddress"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
             <EditText
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtURAddress"
+                android:id="@+id/txtUrAddress"
                 android:shadowColor="#f0f8ffff"
                 android:hint="Antonio Varas #989"
                 android:background="#808080"
@@ -174,19 +174,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblURComuna"
+                android:id="@+id/lblUrComuna"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
-            <EditText
-                android:inputType="text"
+            <Spinner
+                android:id="@+id/sprUrCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtURComuna"
-                android:shadowColor="#f0f8ffff"
-                android:hint="Temuco"
-                android:background="#808080"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp" />
+                android:textSize="17dp" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -195,12 +190,12 @@
                 android:text="Registrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnURRegister" />
+                android:id="@+id/btnUrRegister" />
             <Button
                 android:text="Volver al menú principal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnURReturn" />
+                android:id="@+id/btnUrReturn" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

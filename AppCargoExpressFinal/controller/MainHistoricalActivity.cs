@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace AppCargoExpressFinal.controller
 {
-    [Activity(Label = "MainHistoricalActivity")]
+    [Activity(Label = "MainHistoricalActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class MainHistoricalActivity : Activity
     {
         private Button btnVolver;
@@ -31,7 +31,7 @@ namespace AppCargoExpressFinal.controller
 
         private void InitComponents()
         {
-            typeOfUser = Intent.GetIntExtra("TypeOfUser", 1);
+            typeOfUser = int.Parse(AuthService.UserType);
             btnVolver = FindViewById<Button>(Resource.Id.btnMhReturn);
             btnCargasRealizadas = FindViewById<Button>(Resource.Id.btnMhPerformedCargoes);
             btnCargasAdjudicadas = FindViewById<Button>(Resource.Id.btnMhAwardedCargoes);
@@ -50,22 +50,19 @@ namespace AppCargoExpressFinal.controller
 
         private void BtnCargasAdjudicadas_Click(object sender, EventArgs e)
         {
-            Intent nextScreen = new Intent(this, typeof(AwardedCargoesActivity));
-            nextScreen.PutExtra("TypeOfUser", typeOfUser);
+            Intent nextScreen = new Intent(this, typeof(AwardedCargoesActivity));           
             StartActivity(nextScreen);
         }
 
         private void BtnCargasRealizadas_Click(object sender, EventArgs e)
         {
             Intent nextScreen = new Intent(this, typeof(PerformedCargoesActivity));
-            nextScreen.PutExtra("TypeOfUser", typeOfUser);
             StartActivity(nextScreen);
         }
 
         private void BtnVolver_Click(object sender, EventArgs e)
         {
             Intent nextScreen = new Intent(this, typeof(LoginUserActivity));
-            nextScreen.PutExtra("TypeOfUser", typeOfUser);
             StartActivity(nextScreen);
         }
 

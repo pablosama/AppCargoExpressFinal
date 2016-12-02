@@ -56,9 +56,41 @@
                 android:id="@+id/lblScDestiny"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFFFFF" />
             <Spinner
                 android:id="@+id/sprScDestiny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp" />
+            <TextView
+                android:text="Tipo de Carga:"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="normal"
+                android:gravity="center"
+                android:id="@+id/lblScCargoType"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"               
+                android:textColor="#FFFFFF" />
+            <Spinner
+                android:id="@+id/sprScCargoType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"/>
+            <TextView
+                android:text="Rango de Precio:"
+                android:textSize="17sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="normal"
+                android:gravity="center"
+                android:id="@+id/lblScPriceRange"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#FFFFFF" />
+            <Spinner
+                android:id="@+id/sprScPriceRange"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp" />

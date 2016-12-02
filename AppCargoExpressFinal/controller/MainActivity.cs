@@ -8,10 +8,11 @@ using Android.Content;
 using AppCargoExpressFinal.controller;
 using Xamarin.Auth;
 using Android.Views;
+using System.Collections.Generic;
 
 namespace AppCargoExpressFinal.controller
 {
-    [Activity(Label = "AppCargo", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "AppCargo", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.NoTitleBar")]
     public class MainActivity : Activity
     {
 
@@ -49,20 +50,9 @@ namespace AppCargoExpressFinal.controller
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
-
             this.FinishAffinity();
-            //http://localhost:12276/Service1.svc
-            //service1.Service1 service = new service1.Service1();
-            //service.GetDataAsync(10, true);
-            //service.GetDataCompleted += Service_GetDataCompleted;
-            //test.GetDataAsync(1, true);
-            //test.GetDataCompleted += Test_GetDataCompleted;
         }
-
-        //private void Service_GetDataCompleted(object sender, service1.GetDataCompletedEventArgs e)
-        //{
-        //    var hola = e.Result;
-        //}
+   
 
         //modal for upload/download data
         private void DisplayProgressBar()
@@ -94,7 +84,7 @@ namespace AppCargoExpressFinal.controller
         {
             try
             {
-                bool check = true;//NetworkInterface.GetIsNetworkAvailable();
+                bool check = true;//NetworkInterface.GetIsNetworkAvailable(); comment this line because 
                 if (check)
                 {
                     progressBar = new ProgressDialog(this);
@@ -102,40 +92,41 @@ namespace AppCargoExpressFinal.controller
                     progressBar.SetMessage("Accediendo...");
                     progressBar.SetProgressStyle(ProgressDialogStyle.Spinner);
                     progressBar.Show();
+                  
+                    var dataModels = new DataModels.DataModels();
+                    var userValid = dataModels.UserExist(user, pass);                                
 
                     new Thread(new ThreadStart(delegate ()
                     {
-                        Thread.Sleep(2000);//timer for loading  loading de 1000ms (1 seg)
+                        Thread.Sleep(2000);//timer for loading of 2000ms 
                         RunOnUiThread(() => { progressBar.Hide(); });
-                        RunOnUiThread(() => { Toast.MakeText(this, "Acceso Exitoso", ToastLength.Long).Show();                      
+                        RunOnUiThread(() => { Toast.MakeText(this, userValid?"Acceso Exitoso":"Usuario y/o Contraseña incorrecto", ToastLength.Long).Show();                      
                         });
                     })).Start();
-                    //AppCargoExpress.UserServiceWebReference.UserService servicioUsuarios = new UserServiceWebReference.UserService();
-                    //servicioUsuarios.GetUserAsync(user, pass);
-                    //servicioUsuarios.GetUserCompleted += ServicioUsuarios_GetUserCompleted;
-                  
-                    new Thread(new ThreadStart(delegate ()
+                 
+                    if(userValid)
                     {
-                        Thread.Sleep(2000);//timer for loading of 1000ms (1 seg)
-                        RunOnUiThread(() => { progressBar.Hide(); });
-                        RunOnUiThread(() => {
-                        //Sending data to another Activity
-                        //TODO: here add contection service for user validation
-                        //if is correct then save the credencials in app
-                        AuthService.SaveCredentials(user, pass);
-                        Intent nextScreen = new Intent(this, typeof(LoginUserActivity));
-                        nextScreen.PutExtra("userName", txtUserName.Text);
-                        //here put the type of user, default value is 1
-                        var typeOfUser = 1;
-                        nextScreen.PutExtra("TypeOfUser", typeOfUser);
-                            StartActivity(nextScreen);
-                        });
-                    })).Start();
+                        new Thread(new ThreadStart(delegate ()
+                        {
+                            Thread.Sleep(2000);//timer for loading of 23000ms 
+                            RunOnUiThread(() => { progressBar.Hide(); });
+                            RunOnUiThread(() => {
+                                //Sending data to another Activity
+                                //TODO: here add service conection for user validation
+                                //if is correct then save the credencials in app
+                                var userData = dataModels.GetUsuerio(user, pass);
+                                AuthService.SaveCredentials(userData.alias, userData.contrasena, userData.nombre, userData.tipoUsuario);
+                                Intent nextScreen = new Intent(this, typeof(LoginUserActivity));                                                         
+                                StartActivity(nextScreen);
+                            });
+                        })).Start();
+                    }
+                    
                 }
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 
@@ -145,50 +136,5 @@ namespace AppCargoExpressFinal.controller
             StartActivity(nextScreen);
         }
 
-        //private void Hombre_HelloWorldCompleted(object sender, hombre.HelloWorldCompletedEventArgs e)
-        //{
-        //    var hola = "hola";
-        //}
-
-        //private void ServicioUsuarios_GetUserCompleted(object sender, GetUserCompletedEventArgs e)//UserServiceWebReference.GetUserCompletedEventArgs e
-        //{
-
-        //    int a;
-
-        //    a = 1;
-
-        //    hombre.WebService1 b = new hombre.WebService1();
-
-        //    int resp = b.HelloWorld(a);
-        //    miUsuario = e.Result;
-
-        //    if (miUsuario.Id_Usuario > 0)
-        //    {
-        //        new Thread(new ThreadStart(delegate ()
-        //        {
-        //            Thread.Sleep(1000);//espera para visualizar el loading de 1000ms (1 seg)
-        //            RunOnUiThread(() => { progressBar.Hide(); });
-        //            RunOnUiThread(() => { Toast.MakeText(this, "Acceso Exitoso", ToastLength.Long).Show(); });
-        //        })).Start();
-        //    }
-        //    else
-        //    {
-        //        new Thread(new ThreadStart(delegate ()
-        //        {
-        //            Thread.Sleep(1000);//espera para visualizar el loading de 1000ms (1 seg)
-        //            RunOnUiThread(() => { progressBar.Hide(); });
-        //            RunOnUiThread(() => { Toast.MakeText(this, "usuario y/o contraseña incorrecta", ToastLength.Long).Show(); });
-        //        })).Start();
-        //    }
-
-
-        //    BindUser();
-        //}
-
-        //private void BindUser()
-        //{
-        //    txtLogin.Text = miUsuario.Nick.ToString();
-        //    txtPass.Text = miUsuario.Clave.ToString();
-        //}
     }
 }
