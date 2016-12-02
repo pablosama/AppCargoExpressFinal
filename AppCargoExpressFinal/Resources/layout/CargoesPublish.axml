@@ -18,10 +18,10 @@
                 android:layout_height="wrap_content"
                 android:minHeight="15sp" />
             <TextView
-                android:text="BÚSQUEDA DE VIAJE"
+                android:text="PUBLICAR CARGA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblScTitle"
+                android:id="@+id/lblCpTitle"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:typeface="normal"
@@ -37,12 +37,12 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblScOrigin"
+                android:id="@+id/lblCpOrigin"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="#FFFFFF" />
             <Spinner
-                android:id="@+id/sprScOrigin"
+                android:id="@+id/sprCpOrigin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp" />
@@ -53,12 +53,12 @@
                 android:layout_height="wrap_content"
                 android:typeface="normal"
                 android:gravity="center"
-                android:id="@+id/lblScDestiny"
+                android:id="@+id/lblCpDestiny"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="#FFFFFF" />
             <Spinner
-                android:id="@+id/sprScDestiny"
+                android:id="@+id/sprCpDestiny"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp" />
@@ -69,12 +69,12 @@
                 android:layout_height="wrap_content"
                 android:typeface="normal"
                 android:gravity="center"
-                android:id="@+id/lblScCargoType"
+                android:id="@+id/lblCpCargoType"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="#FFFFFF" />
             <Spinner
-                android:id="@+id/sprScCargoType"
+                android:id="@+id/sprCpCargoType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp" />
@@ -85,25 +85,25 @@
                 android:layout_height="wrap_content"
                 android:typeface="normal"
                 android:gravity="center"
-                android:id="@+id/lblScPriceRange"
+                android:id="@+id/lblCpPriceRange"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="#FFFFFF" />
             <Spinner
-                android:id="@+id/sprScPriceRange"
+                android:id="@+id/sprCpPriceRange"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp" />
             <Button
-                android:text="Buscar"
+                android:text="Publicar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnScSearch" />
+                android:id="@+id/btnCpPublish" />
             <Button
                 android:text="Volver"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnScReturn" />
+                android:id="@+id/btnCpReturn" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -30,11 +30,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnLUAPublishCargo" />
     <Button
-        android:text="Publicar Viaje"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnLUAPublishTravel" />
-    <Button
         android:text="Buscar Viaje"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -28,7 +28,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidLinkMode>None</AndroidLinkMode>
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
     <BundleAssemblies>False</BundleAssemblies>
     <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
@@ -87,6 +87,7 @@
     <Compile Include="controller\PublishedTripActivity.cs" />
     <Compile Include="controller\PublishedTripConfirmationActivity.cs" />
     <Compile Include="controller\SearchCargoesActivity.cs" />
+    <Compile Include="controller\CargoesPublishActivity.cs" />
     <Compile Include="controller\UserRegisterActivity.cs" />
     <Compile Include="DataModels\DataModels.cs" />
     <Compile Include="models\PerformedCargoes.cs" />
@@ -127,6 +128,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\PublishedTripConfirmation.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\CargoesPublish.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

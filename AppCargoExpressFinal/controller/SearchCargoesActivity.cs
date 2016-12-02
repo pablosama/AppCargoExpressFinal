@@ -18,7 +18,6 @@ namespace AppCargoExpressFinal.controller
     {
         private Button btnSearch;
         private Button btnReturn;
-        private Button btnClean;
         private Spinner spnOrigin;
         private Spinner spnDestiny;
         private Spinner spnCargoType;
@@ -61,20 +60,13 @@ namespace AppCargoExpressFinal.controller
             spnPriceRange.Adapter = priceRangeAdapter;
 
             btnSearch = FindViewById<Button>(Resource.Id.btnScSearch);
-            btnClean = FindViewById<Button>(Resource.Id.btnScClean);
             btnReturn = FindViewById<Button>(Resource.Id.btnScReturn);
         }
 
         private void InitEvents()
         {
             btnReturn.Click += BtnReturn_Click;
-            btnClean.Click += BtnClean_Click;
             btnSearch.Click += BtnSearch_Click;
-        }
-
-        private void BtnClean_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)

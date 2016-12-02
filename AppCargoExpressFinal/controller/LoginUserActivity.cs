@@ -17,7 +17,6 @@ namespace AppCargoExpressFinal.controller
         private Button btnVolver;
         private Button btnModificarRegistro;
         private Button btnPublicarCarga;
-        private Button btnPublicarViaje;
         private Button btnHistorial;
         private TextView txtWelcomeUser;
         private Button btnBuscarViaje;
@@ -43,18 +42,22 @@ namespace AppCargoExpressFinal.controller
             btnVolver = FindViewById<Button>(Resource.Id.btnLUAReturn);
             btnModificarRegistro = FindViewById<Button>(Resource.Id.btnLUAModifyRegister);
             btnPublicarCarga = FindViewById<Button>(Resource.Id.btnLUAPublishCargo);
-            btnPublicarViaje = FindViewById<Button>(Resource.Id.btnLUAPublishTravel);
             btnHistorial = FindViewById<Button>(Resource.Id.btnLUAHistorical);
             btnBuscarViaje = FindViewById<Button>(Resource.Id.btnLUASearchTravel);
             btnBuscarCarga = FindViewById<Button>(Resource.Id.btnLUASearchCargo);
 
             btnVolver.Click += BtnVolver_Click;
             btnModificarRegistro.Click += BtnModificarRegistro_Click;
-            btnPublicarCarga.Click += BtnPublicarCarga_Click;
-            btnPublicarViaje.Click += BtnPublicarViaje_Click;
             btnBuscarViaje.Click += BtnBuscarViaje_Click;
             btnBuscarCarga.Click += BtnBuscarCarga_Click;
             btnHistorial.Click += BtnHistorial_Click;
+            btnPublicarCarga.Click += BtnPublicarCarga_Click;
+        }
+
+        private void BtnPublicarCarga_Click(object sender, EventArgs e)
+        {
+            Intent nextScreen = new Intent(this, typeof(CargoesPublishActivity));
+            StartActivity(nextScreen);
         }
 
         private void BtnBuscarCarga_Click(object sender, EventArgs e)
@@ -75,15 +78,6 @@ namespace AppCargoExpressFinal.controller
             StartActivity(nextScreen);
         }
 
-        private void BtnPublicarViaje_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnPublicarCarga_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnModificarRegistro_Click(object sender, EventArgs e)
         {
@@ -103,7 +97,6 @@ namespace AppCargoExpressFinal.controller
             switch (typeOfUser)
             {
                 case 1:
-                    btnPublicarViaje.Visibility = ViewStates.Gone;
                     btnBuscarViaje.Visibility = ViewStates.Gone;
                     break;
                 case 2:
