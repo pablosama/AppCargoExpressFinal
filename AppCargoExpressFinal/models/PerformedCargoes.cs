@@ -15,25 +15,29 @@ namespace AppCargoExpressFinal.models
     public class PerformedCargoes
     {
 
-        private int numeroOperacion;
+        private string usuario;
         private string fecha;
         private string origenDestino;
+        private string tipoCarga;
+        private string monto;
         
-        public PerformedCargoes(int numeroOperacion, string fecha, string origenDestino)
+        public PerformedCargoes(string usuario, string fecha, string origenDestino,string tipoCarga, string monto)
         {
-            this.numeroOperacion = numeroOperacion;
+            this.usuario = usuario;
             this.fecha = fecha;
             this.origenDestino = origenDestino;
+            this.tipoCarga = tipoCarga;
+            this.monto = monto;
         } 
 
-        public int getNumeroOperacion()
+        public string getUsuario()
         {
-            return numeroOperacion;
+            return usuario;
         }
 
-        public void setNumeroOperacion(int numeroOperacion)
+        public void setUsuario(string usuario)
         {
-            this.numeroOperacion = numeroOperacion;
+            this.usuario = usuario;
         }
 
         public string getFecha()
@@ -54,6 +58,26 @@ namespace AppCargoExpressFinal.models
         public void setOrigenDestino(string origenDestino)
         {
             this.origenDestino = origenDestino;
+        }
+
+        public string getTipoCarga()
+        {
+            return tipoCarga;
+        }
+
+        public void setTipoCarga(string tipoCarga)
+        {
+            this.tipoCarga = tipoCarga;
+        }
+
+        public string getMonto()
+        {
+            return monto;
+        }
+
+        public void setMonto(string monto)
+        {
+            this.monto = monto;
         }
     }
 }

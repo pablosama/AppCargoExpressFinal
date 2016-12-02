@@ -54,14 +54,21 @@ namespace AppCargoExpressFinal.controller
                 row = LayoutInflater.From(mContext).Inflate(Resource.Layout.PerformedCargoes, null, false);
             }
 
-            TextView numeroOperacion = row.FindViewById<TextView>(Resource.Id.lblPcNumOperation);
-            numeroOperacion.Text = mItems[position].getNumeroOperacion().ToString();
+            TextView usuario = row.FindViewById<TextView>(Resource.Id.txtPcUser);
+            usuario.Text = mItems[position].getUsuario().ToString();
 
-            TextView origenDestino = row.FindViewById<TextView>(Resource.Id.lblPcOriginDestiny);
+            TextView origenDestino = row.FindViewById<TextView>(Resource.Id.txtPcOriginDestiny);
             origenDestino.Text = mItems[position].getOrigenDestino();
 
-            TextView fecha = row.FindViewById<TextView>(Resource.Id.lblPcDateList);
+            TextView fecha = row.FindViewById<TextView>(Resource.Id.txtPcDate);
             fecha.Text = mItems[position].getFecha().ToString();
+
+            TextView tipoCarga = row.FindViewById<TextView>(Resource.Id.txtPcCargoType);
+            tipoCarga.Text = mItems[position].getTipoCarga().ToString();
+
+            TextView monto = row.FindViewById<TextView>(Resource.Id.txtPcValue);
+            monto.Text = mItems[position].getMonto().ToString();
+
 
             return row;
         }

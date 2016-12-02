@@ -3,22 +3,22 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <Space
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:minHeight="30sp" />
-  <TextView
-      android:text="Cargas Realizadas"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_weight="20"
-      android:id="@+id/lblChTitleList"
-      android:textSize="20sp"
-      android:textStyle="bold"
-      android:typeface="normal"
-      android:gravity="center" />
-  <Space
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:minHeight="15sp" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30sp" />
+    <TextView
+        android:text="Cargas Realizadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:id="@+id/lblChTitleList"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="15sp" />
 </LinearLayout>

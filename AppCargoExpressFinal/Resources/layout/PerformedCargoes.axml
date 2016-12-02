@@ -10,10 +10,10 @@
         android:layout_height="wrap_content"
         android:minHeight="30sp" />
     <TextView
-        android:text="número de operación"
+        android:text="usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblPcNumOperation"
+        android:id="@+id/txtPcUser"
         android:textSize="20sp"
         android:textStyle="bold"
         android:typeface="normal"
@@ -22,7 +22,7 @@
         android:text="fecha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblPcDateList"
+        android:id="@+id/txtPcDate"
         android:textSize="15sp"
         android:textStyle="bold"
         android:typeface="normal"
@@ -31,7 +31,25 @@
         android:text="origen - destino"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblPcOriginDestiny"
+        android:id="@+id/txtPcOriginDestiny"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <TextView
+        android:text="tipo de carga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPcCargoType"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <TextView
+        android:text="monto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPcValue"
         android:textSize="15sp"
         android:textStyle="bold"
         android:typeface="normal"
