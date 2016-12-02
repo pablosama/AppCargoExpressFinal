@@ -150,11 +150,11 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f060035
 			public const int btnScSearch = 2131099701;
 			
-			// aapt resource value: 0x7f06004b
-			public const int btnUrRegister = 2131099723;
+			// aapt resource value: 0x7f06004d
+			public const int btnUrRegister = 2131099725;
 			
-			// aapt resource value: 0x7f06004c
-			public const int btnUrReturn = 2131099724;
+			// aapt resource value: 0x7f06004e
+			public const int btnUrReturn = 2131099726;
 			
 			// aapt resource value: 0x7f060011
 			public const int chkMRecord = 2131099665;
@@ -210,26 +210,29 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f06002c
 			public const int lblScTitle = 2131099692;
 			
-			// aapt resource value: 0x7f060047
-			public const int lblUrAddress = 2131099719;
+			// aapt resource value: 0x7f060049
+			public const int lblUrAddress = 2131099721;
 			
 			// aapt resource value: 0x7f06003d
 			public const int lblUrAlias = 2131099709;
 			
-			// aapt resource value: 0x7f060041
-			public const int lblUrCodArea = 2131099713;
+			// aapt resource value: 0x7f060043
+			public const int lblUrCodArea = 2131099715;
 			
-			// aapt resource value: 0x7f060049
-			public const int lblUrComuna = 2131099721;
+			// aapt resource value: 0x7f06004b
+			public const int lblUrComuna = 2131099723;
 			
-			// aapt resource value: 0x7f060045
-			public const int lblUrMail = 2131099717;
+			// aapt resource value: 0x7f060047
+			public const int lblUrMail = 2131099719;
 			
 			// aapt resource value: 0x7f06003f
-			public const int lblUrPhone = 2131099711;
+			public const int lblUrPass = 2131099711;
 			
-			// aapt resource value: 0x7f060043
-			public const int lblUrPhone2 = 2131099715;
+			// aapt resource value: 0x7f060041
+			public const int lblUrPhone = 2131099713;
+			
+			// aapt resource value: 0x7f060045
+			public const int lblUrPhone2 = 2131099717;
 			
 			// aapt resource value: 0x7f06003b
 			public const int lblUrUserLastName = 2131099707;
@@ -264,8 +267,8 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f060034
 			public const int sprScPriceRange = 2131099700;
 			
-			// aapt resource value: 0x7f06004a
-			public const int sprUrCity = 2131099722;
+			// aapt resource value: 0x7f06004c
+			public const int sprUrCity = 2131099724;
 			
 			// aapt resource value: 0x7f060012
 			public const int tblMLayout1 = 2131099666;
@@ -294,23 +297,26 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f060021
 			public const int txtPSRWelcomeUser = 2131099681;
 			
-			// aapt resource value: 0x7f060048
-			public const int txtUrAddress = 2131099720;
+			// aapt resource value: 0x7f06004a
+			public const int txtUrAddress = 2131099722;
 			
 			// aapt resource value: 0x7f06003e
 			public const int txtUrAlias = 2131099710;
 			
-			// aapt resource value: 0x7f060042
-			public const int txtUrCodArea = 2131099714;
+			// aapt resource value: 0x7f060044
+			public const int txtUrCodArea = 2131099716;
 			
-			// aapt resource value: 0x7f060046
-			public const int txtUrMail = 2131099718;
+			// aapt resource value: 0x7f060048
+			public const int txtUrMail = 2131099720;
 			
 			// aapt resource value: 0x7f060040
-			public const int txtUrPhone = 2131099712;
+			public const int txtUrPassword = 2131099712;
 			
-			// aapt resource value: 0x7f060044
-			public const int txtUrPhone2 = 2131099716;
+			// aapt resource value: 0x7f060042
+			public const int txtUrPhone = 2131099714;
+			
+			// aapt resource value: 0x7f060046
+			public const int txtUrPhone2 = 2131099718;
 			
 			// aapt resource value: 0x7f06003c
 			public const int txtUrUserLastName = 2131099708;

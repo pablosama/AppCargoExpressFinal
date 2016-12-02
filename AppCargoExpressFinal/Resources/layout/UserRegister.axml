@@ -80,6 +80,23 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />
             <TextView
+                android:text="Clave:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblUrPass"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtUrPassword"
+                android:hint="ingrese contraseña"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
                 android:text="Teléfono Móvil:"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
@@ -181,7 +198,9 @@
                 android:id="@+id/sprUrCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="17dp" />
+                android:textSize="17dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

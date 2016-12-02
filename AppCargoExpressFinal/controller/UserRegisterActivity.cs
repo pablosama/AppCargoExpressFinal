@@ -20,7 +20,6 @@ namespace AppCargoExpressFinal.controller
         private Button btnReturn;
         private ProgressDialog progressBar;
         private Spinner spnUrCity;
-        private int typeOfUser;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,28 +45,76 @@ namespace AppCargoExpressFinal.controller
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
+            var user = GetFormData();
+            var data = new DataModels.DataModels();
+            var isValidForm = !string.IsNullOrEmpty(user.alias);
+            var isValidUser = false;
+            if (isValidForm)
+            {
+                isValidUser = !data.UserExist(user.alias, user.nombre, user.apellido);
+            }
+           
             progressBar = new ProgressDialog(this);
-            progressBar.SetCancelable(false);
-            progressBar.SetMessage("Registrando...");
-            progressBar.SetProgressStyle(ProgressDialogStyle.Spinner);
-            progressBar.Show();
+            if(isValidForm)
+            {
+                progressBar.SetCancelable(false);
+                progressBar.SetMessage("Validando Cuenta...");
+                progressBar.SetProgressStyle(ProgressDialogStyle.Spinner);
+                progressBar.Show();
+            }         
 
             new Thread(new ThreadStart(delegate ()
             {
                 Thread.Sleep(2000);//timer for loading  loading de 1000ms (1 seg)
                 RunOnUiThread(() => { progressBar.Hide(); });
                 RunOnUiThread(() => {
-                    Toast.MakeText(this, "Registro Exitoso", ToastLength.Long).Show();
+                    if(isValidUser)
+                    {
+                        data.SetUser(user);
+                    }
+                    Toast.MakeText(this, !isValidForm ? 
+                                         "Complete los datos del formulario":
+                                         isValidUser? "Registro Exitoso":"El alias y/o usuario ya existe", 
+                                         ToastLength.Long).Show();
                 });
             })).Start();
 
-            new Thread(new ThreadStart(delegate ()
+            if(isValidForm && isValidUser)
             {
-                Thread.Sleep(2000);//timer for loading  loading de 1000ms (1 seg)
-                RunOnUiThread(() => { progressBar.Hide(); });
-                Intent nextScreen = new Intent(this, typeof(MainActivity));
-                StartActivity(nextScreen);
-            })).Start();
+                new Thread(new ThreadStart(delegate ()
+                {
+                    Thread.Sleep(2000);//timer for loading  loading de 1000ms (1 seg)
+                    RunOnUiThread(() => { progressBar.Hide(); });
+                    Intent nextScreen = new Intent(this, typeof(MainActivity));
+                    StartActivity(nextScreen);
+                })).Start();
+            }
+          
+        }
+
+        private DataModels.DataModels.Usuario GetFormData()
+        {
+            var model = new DataModels.DataModels.Usuario();
+            EditText txtName = FindViewById<EditText>(Resource.Id.txtUrUserName);
+            EditText txtLastName = FindViewById<EditText>(Resource.Id.txtUrUserLastName);
+            EditText txtAlias = FindViewById<EditText>(Resource.Id.txtUrAlias);
+            EditText txtPass = FindViewById<EditText>(Resource.Id.txtUrPassword);
+            EditText txtMovilPhone = FindViewById<EditText>(Resource.Id.txtUrPhone);
+            EditText txtCodArea = FindViewById<EditText>(Resource.Id.txtUrCodArea);
+            EditText txtPhone2 = FindViewById<EditText>(Resource.Id.txtUrPhone2);
+            EditText txtMail = FindViewById<EditText>(Resource.Id.txtUrMail);
+            EditText txtAdress = FindViewById<EditText>(Resource.Id.txtUrAddress);
+            Spinner spnCity = FindViewById<Spinner>(Resource.Id.sprUrCity);
+
+            if(!string.IsNullOrEmpty(txtName.Text.Trim()) && !string.IsNullOrEmpty(txtLastName.Text.Trim()) && 
+               !string.IsNullOrEmpty(txtAlias.Text.Trim()) && !string.IsNullOrEmpty(txtMovilPhone.Text.Trim()) &&
+               !string.IsNullOrEmpty(txtMail.Text.Trim()) && !string.IsNullOrEmpty(txtAdress.Text.Trim()) &&
+               !string.IsNullOrEmpty(txtPass.Text.Trim()))
+            {
+                model = new DataModels.DataModels.Usuario(txtAlias.Text, txtPass.Text,txtName.Text, txtLastName.Text, 1,txtMovilPhone.Text, txtCodArea.Text, txtMail.Text, spnUrCity.SelectedItem.ToString(), txtAdress.Text, DateTime.Now,DateTime.Now);
+            }
+
+            return model;
         }
     }
 }

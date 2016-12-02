@@ -94,7 +94,7 @@ namespace AppCargoExpressFinal.controller
                     progressBar.Show();
                   
                     var dataModels = new DataModels.DataModels();
-                    var userValid = dataModels.UserExist(user, pass);                                
+                    var userValid = dataModels.UserExist(user, string.Empty, string.Empty);                                
 
                     new Thread(new ThreadStart(delegate ()
                     {
@@ -114,7 +114,7 @@ namespace AppCargoExpressFinal.controller
                                 //Sending data to another Activity
                                 //TODO: here add service conection for user validation
                                 //if is correct then save the credencials in app
-                                var userData = dataModels.GetUsuerio(user, pass);
+                                var userData = dataModels.GetUser(user, pass);
                                 AuthService.SaveCredentials(userData.alias, userData.contrasena, userData.nombre, userData.tipoUsuario);
                                 Intent nextScreen = new Intent(this, typeof(LoginUserActivity));                                                         
                                 StartActivity(nextScreen);

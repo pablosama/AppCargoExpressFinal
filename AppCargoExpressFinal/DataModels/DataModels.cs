@@ -14,7 +14,6 @@ namespace AppCargoExpressFinal.DataModels
 {
     public class DataModels
     {
-
         public class Usuario
         {
             public string alias { get; set; }
@@ -29,6 +28,11 @@ namespace AppCargoExpressFinal.DataModels
             public DateTime fechaCreacion { get; set; }
             public DateTime fechaActualizacion { get; set; }
             public string contrasena { get; set; }
+
+            public Usuario()
+            {
+
+            }
 
             public Usuario(string alias, string contrasena, string nombre, string apellido, int tipoUsuario, string telefonoMovil, string codigoArea, string mail, string comuna, string direccion, DateTime fechaCreacion, DateTime fechaActualizacion)
             {
@@ -47,11 +51,7 @@ namespace AppCargoExpressFinal.DataModels
             }
         }
 
-
-
-        public List<Usuario> GetUsuarios()        
-        {
-            var usuarios = new List<Usuario> {
+        private List<Usuario> usuarios = new List<Usuario> {
             new Usuario("davalos","1234","Patrick","Arancibia",2,"98765432","+569","patrick.arancibia@gmail.com","Temuco","Dirección n°1",DateTime.Parse("2015-12-05"),DateTime.Parse("2016-06-05")),
             new Usuario("minimi","1234","Hans","Rubio",1,"94764381","+569","hans.rubio@gmail.com","Talca","Dirección n°2",DateTime.Parse("2015-07-05"),DateTime.Parse("2016-04-03")),
             new Usuario("undertaker","1234","David","Vasquez",1,"76543289","+569","david.vasquez@gmail.com","Coyhaique","Dirección n°3",DateTime.Parse("2015-08-01"),DateTime.Parse("2016-01-01")),
@@ -62,17 +62,25 @@ namespace AppCargoExpressFinal.DataModels
             new Usuario("huaso","1234","Angelo","Venegas",1,"65437891","+569","angelo.venegas@gmail.com","Purén","Dirección n°8",DateTime.Parse("2013-12-05"),DateTime.Parse("2016-01-08")),
             new Usuario("skynner","1234","Jaime","Vargas",1,"23458764","+569","jaime.vargas@gmail.com","Temuco","Dirección n°9",DateTime.Parse("2015-12-05"),DateTime.Parse("2016-03-09")),
             };
+
+        public List<Usuario> GetUsuarios()        
+        {           
             return usuarios;
         }
 
-        public bool UserExist(string alias, string password)
+        public bool UserExist(string alias, string Name,string lastName)
         {
-            return GetUsuarios().Any(x => x.alias == alias && x.contrasena == password);          
+            return GetUsuarios().Any(x => x.alias == alias || (x.nombre == Name && x.apellido == lastName));          
         }
 
-        public Usuario GetUsuerio(string alias, string password)
+        public Usuario GetUser(string alias, string password)
         {
             return GetUsuarios().FirstOrDefault(x => x.alias == alias && x.contrasena == password);
+        }
+
+        public void SetUser(Usuario usuario)
+        {
+            usuarios.Add(usuario);
         }
 
 
