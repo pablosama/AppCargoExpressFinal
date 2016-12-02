@@ -15,11 +15,11 @@ namespace AppCargoExpressFinal.models
     public class PerformedCargoes
     {
 
-        private string usuario;
-        private string fecha;
-        private string origenDestino;
-        private string tipoCarga;
-        private string monto;
+        public string usuario;
+        public string fecha;
+        public string origenDestino;
+        public string tipoCarga;
+        public string monto;
         
         public PerformedCargoes(string usuario, string fecha, string origenDestino,string tipoCarga, string monto)
         {
@@ -73,6 +73,11 @@ namespace AppCargoExpressFinal.models
         public string getMonto()
         {
             return monto;
+        }
+
+        public int getIntMonto()
+        {
+            return int.Parse(monto.Replace("$", "").Replace(".", ""));
         }
 
         public void setMonto(string monto)

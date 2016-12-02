@@ -76,6 +76,7 @@
     <Compile Include="controller\PerformedCargoesActivity.cs" />
     <Compile Include="controller\PerformedCargoesAdapter.cs" />
     <Compile Include="controller\PreSelectRegisterActivity.cs" />
+    <Compile Include="controller\PublishedTripActivity.cs" />
     <Compile Include="controller\SearchCargoesActivity.cs" />
     <Compile Include="controller\UserRegisterActivity.cs" />
     <Compile Include="DataModels\DataModels.cs" />
@@ -109,6 +110,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\CargoesFooter.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AwardedCargoesMain.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

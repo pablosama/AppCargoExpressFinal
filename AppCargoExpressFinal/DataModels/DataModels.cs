@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using AppCargoExpressFinal.models;
 
 namespace AppCargoExpressFinal.DataModels
 {
@@ -63,14 +64,14 @@ namespace AppCargoExpressFinal.DataModels
             new Usuario("skynner","1234","Jaime","Vargas",1,"23458764","+569","jaime.vargas@gmail.com","Temuco","Dirección n°9",DateTime.Parse("2015-12-05"),DateTime.Parse("2016-03-09")),
             };
 
-        public List<Usuario> GetUsuarios()        
-        {           
+        public List<Usuario> GetUsuarios()
+        {
             return usuarios;
         }
 
-        public bool UserExist(string alias, string Name,string lastName)
+        public bool UserExist(string alias, string Name, string lastName)
         {
-            return GetUsuarios().Any(x => x.alias == alias || (x.nombre == Name && x.apellido == lastName));          
+            return GetUsuarios().Any(x => x.alias == alias || (x.nombre == Name && x.apellido == lastName));
         }
 
         public Usuario GetUser(string alias, string password)
@@ -84,30 +85,46 @@ namespace AppCargoExpressFinal.DataModels
         }
 
 
-        public static List<string> CargoTypes = new List<string>
+        public static Dictionary<int,string> CargoTypes = new Dictionary<int, string>
         {
-            "Artículo Hogar",
-            "Mudanza",
-            "Vehículos Menores",
-            "Vehículos Mayores",
-            "Industial",
-            "Carga Peligrosa",
-            "Todas"
+            { 1, "Artículo Hogar" },
+            { 2, "Mudanza" },
+            { 3, "Vehículos Menores" },
+            { 4, "Vehículos Mayores" },
+            { 5, "Industial" },
+            { 6, "Carga Peligrosa" },
+            { 7, "Todas" }
         };
 
-        public static List<string> PriceRange = new List<string>
+        public static List<PerformedCargoes> mItems = new List<PerformedCargoes>()
         {
-            "$10.000 a $50.000",            
-            "$50.000 a $70.000",
-            "$70.000 a $100.000",
-            "$100.000 a $150.000",
-            "$150.000 a $200.000",
-            "$200.000 a $300.000",
-            "$300.000 a $400.000",
-            "$400.000 a $500.000",
-            "500.000 a $1.000.000",
-            "$1.000.000 o más",
-            "Cualquier Precio"
+            new PerformedCargoes ("Esteban Dido","07/11/2016","Algarrobo - Alhue","Industial","$180.000"),
+            new PerformedCargoes ("Armando Casas","05/11/2016","Pto. Montt - Santiago","Mudanza","$300.000"),
+            new PerformedCargoes ("Julio Rodriguez","06/11/2016","Santiago - Arica","Artículo Hogar","$100.000"),
+            new PerformedCargoes ("Beto Cuevas","07/11/2016","Coquimbo - Concepcion","Industial","$190.000"),
+            new PerformedCargoes ("Arturo Prat","08/11/2016","Concepcion - Temuco","Carga Peligrosa","$210.000"),
+            new PerformedCargoes ("Pablo Neruda","16/11/2016","Osorno - Lanco","Vehículos Mayores","$90.000"),
+            new PerformedCargoes ("Eduardo Oses","15/11/2016","Concepcion - Temuco","Vehículos Menores","$80.000"),
+            new PerformedCargoes ("Daniel Fuentes","15/11/2016","Concepcion - Temuco","Vehículos Menores","$100.000"),
+            new PerformedCargoes ("Esteban Sepúlveda","17/11/2016","Lanco - Valdivia","Carga Peligrosa","$50.000"),
+            new PerformedCargoes ("Marcos Gutierrez","18/11/2016","Valdivia - Pto. Montt","Carga Peligrosa","$230.000"),
+            new PerformedCargoes ("Rodrigo Campos","19/11/2016","Pto. Montt - Chiloe","Artículo Hogar","$50.000"),
+            new PerformedCargoes ("Renier Gonzalez","20/11/2016","Pta. Arenas - Cohyaique","Mudanza","$200.000")
+        };
+
+        public static Dictionary<string, string> PriceRangeAndId = new Dictionary<string, string>
+        {
+            { "10000,50000", "$10.000 a $50.000" },
+            { "50000,70000", "$50.000 a $70.000" },
+            { "70000,100000", "$70.000 a $100.000" },
+            { "100000,150000", "$100.000 a $150.000" },
+            { "150000,200000", "$150.000 a $200.000" },
+            { "200000,300000", "$200.000 a $300.000"},
+            { "300000,400000", "$300.000 a $400.000"},
+            { "400000,500000", "$400.000 a $500.000"},
+            { "500000,1000000", "500.000 a $1.000.000"},
+            { "1000000","$1.000.000 o más"},
+            { "0", "Cualquier Precio"}
         };
 
         public static List<string> Cities = new List<string>
