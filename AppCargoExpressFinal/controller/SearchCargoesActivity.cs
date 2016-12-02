@@ -84,20 +84,6 @@ namespace AppCargoExpressFinal.controller
             var cargoTypeValue = spnCargoType.SelectedItem.ToString();
             var priceRangeValue = spnPriceRange.SelectedItem.ToString();
 
-            //var allCargoType = DataModels.DataModels.CargoTypes.FirstOrDefault(o => o.Key == 7).Value;
-
-            //var range = DataModels.DataModels.PriceRangeAndId.FirstOrDefault(o => o.Value == priceRangeValue).Key;
-
-            //var rangeValues = range.Split(',').Select(int.Parse).ToList();
-
-
-            //var list = DataModels.DataModels.mItems;
-            //list.Where( o => o.getOrigenDestino().StartsWith(originValue) && o.getOrigenDestino().EndsWith(destinyValue) && 
-            //            cargoTypeValue == allCargoType ? true : o.getTipoCarga() == cargoTypeValue &&
-            //            rangeValues.Count() == 2 ? (o.getIntMonto() >= rangeValues[0] && o.getIntMonto() <= rangeValues[1]) : (o.getIntMonto() >= rangeValues[0]) );
-            //var data = new DataModels.DataModels();
-            //var anyData = data.GetTrips(originValue, destinyValue, cargoTypeValue, priceRangeValue);
-
             Intent nextScreen = new Intent(this, typeof(PublishedTripActivity));
             nextScreen.PutExtra("originValue", originValue);
             nextScreen.PutExtra("destinyValue", destinyValue);
@@ -105,15 +91,6 @@ namespace AppCargoExpressFinal.controller
             nextScreen.PutExtra("priceRangeValue", priceRangeValue);
             StartActivity(nextScreen);
 
-            //else
-            //{
-            //    new Thread(new ThreadStart(delegate ()
-            //    {
-            //        Thread.Sleep(1000);//timer for display loaging                
-            //        RunOnUiThread(() => { Toast.MakeText(this, "No se encontraron resultados", ToastLength.Long).Show(); });
-            //    })).Start();
-            //}
-            
         }
 
         private void BtnReturn_Click(object sender, EventArgs e)

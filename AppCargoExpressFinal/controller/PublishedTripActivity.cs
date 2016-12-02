@@ -16,23 +16,11 @@ namespace AppCargoExpressFinal.controller
     [Activity(Label = "PublishedTripActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class PublishedTripActivity : Activity
     {
-        //private List<PerformedCargoes> mItems = new List<PerformedCargoes>()
-        //{
-        //    new PerformedCargoes ("Armando Casas","05/11/2016","Pto. Montt - Santiago","Mudanza","$300.000"),
-        //    new PerformedCargoes ("Julio Rodriguez","06/11/2016","Santiago - Arica","Artículo Hogar","$100.000"),
-        //    new PerformedCargoes ("Beto Cuevas","07/11/2016","Coquimbo - Concepción","Industial","$190.000"),
-        //    new PerformedCargoes ("Arturo Prat","08/11/2016","Concepción - Temuco","Carga Peligrosa","$210.000"),
-        //    new PerformedCargoes ("Pablo Neruda","16/11/2016","Osorno - Lanco","Vehículos Mayores","$90.000"),
-        //    new PerformedCargoes ("Eduardo Oses","15/11/2016","Concepción - Temuco","Vehículos Menores","$80.000"),
-        //    new PerformedCargoes ("Daniel Fuentes","15/11/2016","Concepción - Temuco","Vehículos Menores","$100.000"),
-        //    new PerformedCargoes ("Esteban Sepúlveda","17/11/2016","Lanco - Valdivia","Carga Peligrosa","$50.000"),
-        //    new PerformedCargoes ("Marcos Gutierrez","18/11/2016","Valdivia - Pto. Montt","Carga Peligrosa","$230.000"),
-        //    new PerformedCargoes ("Rodrigo Campos","19/11/2016","Pto. Montt - Chiloé","Artículo Hogar","$50.000"),
-        //    new PerformedCargoes ("Renier Gonzalez","20/11/2016","Pta. Arenas - Cohyaique","Mudanza","$200.000")
-        //};
+   
         private ListView mListView;
         private Button btnVolver;
         private int typeOfUser;
+        private TextView lblName;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -64,14 +52,36 @@ namespace AppCargoExpressFinal.controller
             mListView.Adapter = adapter;
 
             btnVolver = FindViewById<Button>(Resource.Id.btnCfReturn);
+            lblName = FindViewById<TextView>(Resource.Id.txtPcUser);
+            mListView.ItemClick += MListView_ItemClick;
+
             btnVolver.Click += delegate
             {
                 Intent nextScreen = new Intent(this, typeof(SearchCargoesActivity));
                 StartActivity(nextScreen);
             };
+
         }
 
-            public List<PerformedCargoes> GetTrips(string originValue, string destinyValue, string cargoTypeValue, string priceRangeValue)
+        private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var elementSelected = mListView.GetItemAtPosition(e.Position);
+            var usuario = e.View.FindViewById<TextView>(Resource.Id.txtPcUser);
+            var fecha = e.View.FindViewById<TextView>(Resource.Id.txtPcDate);
+            var originDestiny = e.View.FindViewById<TextView>(Resource.Id.txtPcOriginDestiny);
+            var cargoType = e.View.FindViewById<TextView>(Resource.Id.txtPcCargoType);
+            var value = e.View.FindViewById<TextView>(Resource.Id.txtPcValue);
+
+            Intent nextScreen = new Intent(this, typeof(PublishedTripConfirmationActivity));
+            nextScreen.PutExtra("usuario", usuario.Text);
+            nextScreen.PutExtra("fecha", fecha.Text);
+            nextScreen.PutExtra("originDestiny", originDestiny.Text);
+            nextScreen.PutExtra("cargoType", cargoType.Text);
+            nextScreen.PutExtra("value", value.Text);
+            StartActivity(nextScreen);
+        }
+
+        public List<PerformedCargoes> GetTrips(string originValue, string destinyValue, string cargoTypeValue, string priceRangeValue)
             {
 
                 var allCargoType = DataModels.DataModels.CargoTypes.FirstOrDefault(o => o.Key == 7).Value;
@@ -89,7 +99,5 @@ namespace AppCargoExpressFinal.controller
       
                 return list2;
             }
-
-    
     }
 }

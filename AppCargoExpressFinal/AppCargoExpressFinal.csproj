@@ -20,7 +20,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
+    <DebugSymbols>True</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
@@ -28,7 +28,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
-    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <Debugger>Xamarin</Debugger>
+    <AotAssemblies>False</AotAssemblies>
+    <EnableLLVM>False</EnableLLVM>
+    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
+    <EnableProguard>False</EnableProguard>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -77,6 +85,7 @@
     <Compile Include="controller\PerformedCargoesAdapter.cs" />
     <Compile Include="controller\PreSelectRegisterActivity.cs" />
     <Compile Include="controller\PublishedTripActivity.cs" />
+    <Compile Include="controller\PublishedTripConfirmationActivity.cs" />
     <Compile Include="controller\SearchCargoesActivity.cs" />
     <Compile Include="controller\UserRegisterActivity.cs" />
     <Compile Include="DataModels\DataModels.cs" />
@@ -93,7 +102,9 @@
     <AndroidResource Include="Resources\layout\AwardedCargoes.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\LoginUser.axml" />
+    <AndroidResource Include="Resources\layout\LoginUser.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\MainHistorical.axml" />
     <AndroidResource Include="Resources\layout\PerformedCargoes.axml">
       <SubType>Designer</SubType>
@@ -113,6 +124,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\AwardedCargoesMain.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PublishedTripConfirmation.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

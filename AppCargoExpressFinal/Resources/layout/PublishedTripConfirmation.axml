@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="inherit"
+    android:weightSum="100">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30sp" />
+    <TextView
+        android:text="Confirmación"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPtcWelcomeUser"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="15sp" />
+    <TextView
+        android:text="Usuario:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/lblPtcUser"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <TextView
+        android:text="usuario"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/txtPtcUser"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="15sp" />
+    <TextView
+        android:text="Fecha:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/lblPtcDate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <TextView
+        android:text="fecha"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/txtPtcDate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="15sp" />
+    <TextView
+        android:text="Origen - Destino :"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/lblPtcOriginDestiny"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <TextView
+        android:text="origen - destino"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/txtPtcOriginDestiny"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="15sp" />
+    <TextView
+        android:text="Tipo de Carga :"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/lblPtcCargoType"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <TextView
+        android:text="tipo de carga"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/txtPtcCargoType"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="15sp" />
+    <TextView
+        android:text="Precio:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/lblPtcValue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <TextView
+        android:text="monto"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/txtPtcValue"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="15sp" />
+    <TextView
+        android:text="Está a punto de adjudicarse la carga indicada, ¿desea continuar?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/txtPtcInfo"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:gravity="center" />
+    <Button
+        android:text="Confirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPtcConfirm" />
+    <Button
+        android:text="Volver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPtcReturn" />
+</LinearLayout>

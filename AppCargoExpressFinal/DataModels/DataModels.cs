@@ -162,5 +162,6 @@ namespace AppCargoExpressFinal.DataModels
             "Vilcun","Villa Alegre","Villa Alemana","Villarrica","Vina Del Mar","Vitacura","Yerbas Buenas","Yumbel","Yungay","Zapallar",
         };
 
+
     }
 }
