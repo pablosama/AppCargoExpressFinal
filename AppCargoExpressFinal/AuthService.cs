@@ -122,7 +122,7 @@ namespace AppCargoExpressFinal
             get
             {
                 var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
-                return (account != null) ? account.Properties["UserType"] : null;
+                return (account != null) ? account.Properties["LicenceNumber"] : null;
             }
         }
         public static string TypOfVehicle
@@ -172,7 +172,7 @@ namespace AppCargoExpressFinal
                 account.Properties.Add("Password", password);
                 account.Properties.Add("Name", name);
                 account.Properties.Add("LastName", lastName);
-                account.Properties.Add("phoneNumber", phoneNumber);
+                account.Properties.Add("PhoneNumber", phoneNumber);
                 account.Properties.Add("CodArea", codArea);
                 account.Properties.Add("Phone", phone);
                 account.Properties.Add("Mail", mail);
@@ -184,6 +184,28 @@ namespace AppCargoExpressFinal
                 AccountStore.Create(Application.Context).Save(account, Application.Context.ToString());
             }
         }
-    
+
+
+        public static DataModels.DataModels.Usuario GetCredentials()
+        {
+            var usuario = new DataModels.DataModels.Usuario {
+                alias = Alias,
+                nombre = Name,
+                apellido = LastName,
+                contrasena = Password,
+                telefonoMovil = PhoneNumber,
+                telefonoFijo = Phone,
+                codigoArea = CodArea,
+                mail = Mail,
+                direccion = Address,
+                comuna = City,
+                tipoUsuario = int.Parse(UserType),
+                licenceNumber = LicenceNumber,
+                typOfVehicle = TypOfVehicle
+            };
+
+            return usuario;
+        }
+
     }
 }

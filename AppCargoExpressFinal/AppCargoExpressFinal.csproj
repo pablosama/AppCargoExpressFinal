@@ -81,6 +81,7 @@
     <Compile Include="controller\LoginUserActivity.cs" />
     <Compile Include="controller\MainActivity.cs" />
     <Compile Include="controller\MainHistoricalActivity.cs" />
+    <Compile Include="controller\ModifyUserActivity.cs" />
     <Compile Include="controller\PerformedCargoesActivity.cs" />
     <Compile Include="controller\PerformedCargoesAdapter.cs" />
     <Compile Include="controller\PreSelectRegisterActivity.cs" />

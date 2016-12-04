@@ -81,7 +81,8 @@ namespace AppCargoExpressFinal.controller
 
         private void BtnModificarRegistro_Click(object sender, EventArgs e)
         {
-
+            Intent nextScreen = new Intent(this, typeof(ModifyUserActivity));
+            StartActivity(nextScreen);
         }
 
         private void BtnVolver_Click(object sender, EventArgs e)
@@ -102,9 +103,6 @@ namespace AppCargoExpressFinal.controller
                 case 2:
                     btnPublicarCarga.Visibility = ViewStates.Gone;
                     btnBuscarCarga.Visibility = ViewStates.Gone;
-                    break;
-                case 3:
-                    //here put admin buttons  
                     break;
             }
         }
