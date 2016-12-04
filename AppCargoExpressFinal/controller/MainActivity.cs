@@ -115,7 +115,21 @@ namespace AppCargoExpressFinal.controller
                                 //TODO: here add service conection for user validation
                                 //if is correct then save the credencials in app
                                 var userData = dataModels.GetUser(user, pass);
-                                AuthService.SaveCredentials(userData.alias, userData.contrasena, userData.nombre, userData.tipoUsuario);
+                               
+                                AuthService.SaveCredentials(
+                                    userData.alias, 
+                                    userData.contrasena, 
+                                    userData.nombre,
+                                    userData.apellido,
+                                    userData.telefonoMovil,
+                                    userData.codigoArea,
+                                    userData.telefonoFijo, 
+                                    userData.mail,
+                                    userData.direccion,
+                                    userData.comuna,
+                                    userData.tipoUsuario,
+                                    userData.licenceNumber,
+                                    userData.typOfVehicle);
                                 Intent nextScreen = new Intent(this, typeof(LoginUserActivity));                                                         
                                 StartActivity(nextScreen);
                             });

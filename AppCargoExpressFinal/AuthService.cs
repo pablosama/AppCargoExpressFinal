@@ -71,17 +71,39 @@ namespace AppCargoExpressFinal
             }
         }
 
-        public static void SaveCredentials(string userName, string password,string name,int userType)
+        public static void SaveCredentials(
+            string alias,
+            string password,
+            string name,
+            string lastName,
+            string phoneNumber,
+            string codArea,
+            string phone,
+            string mail,
+            string address,
+            string city,    
+            int userType,
+            string licenceNumber = "",
+            string typOfVehicle = "")
         {
-            if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(password) && userType > 0)
+            if (!string.IsNullOrWhiteSpace(alias) && !string.IsNullOrWhiteSpace(password) && userType > 0)
             {
                 Account account = new Account
                 {
-                    Username = userName
+                    Username = alias
                 };
                 account.Properties.Add("Password", password);
                 account.Properties.Add("Name", name);
-                account.Properties.Add("UserType", userType.ToString());
+                account.Properties.Add("LastName", lastName);
+                account.Properties.Add("phoneNumber", phoneNumber);
+                account.Properties.Add("codArea", codArea);
+                account.Properties.Add("phone", phone);
+                account.Properties.Add("mail", mail);
+                account.Properties.Add("address", address);
+                account.Properties.Add("city", city);
+                account.Properties.Add("userType", userType.ToString());
+                account.Properties.Add("licenceNumber", licenceNumber);
+                account.Properties.Add("typOfVehicle", typOfVehicle);
                 AccountStore.Create(Application.Context).Save(account, Application.Context.ToString());
             }
         }

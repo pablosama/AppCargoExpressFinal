@@ -111,7 +111,7 @@ namespace AppCargoExpressFinal.controller
                !string.IsNullOrEmpty(txtMail.Text.Trim()) && !string.IsNullOrEmpty(txtAdress.Text.Trim()) &&
                !string.IsNullOrEmpty(txtPass.Text.Trim()))
             {
-                model = new DataModels.DataModels.Usuario(txtAlias.Text, txtPass.Text,txtName.Text, txtLastName.Text, 1,txtMovilPhone.Text, txtCodArea.Text, txtMail.Text, spnUrCity.SelectedItem.ToString(), txtAdress.Text, DateTime.Now,DateTime.Now);
+                model = new DataModels.DataModels.Usuario(txtAlias.Text, txtPass.Text,txtName.Text, txtLastName.Text, 1,txtMovilPhone.Text, txtCodArea.Text, txtMail.Text, spnUrCity.SelectedItem.ToString(), txtAdress.Text, DateTime.Now, DateTime.Now,txtPhone2.ToString());
             }
 
             return model;
