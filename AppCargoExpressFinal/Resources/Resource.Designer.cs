@@ -116,35 +116,38 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f050026
 			public const int btnMhSeeRank = 2131034150;
 			
-			// aapt resource value: 0x7f050035
-			public const int btnPSRCarrier = 2131034165;
-			
-			// aapt resource value: 0x7f050037
-			public const int btnPSRIngresar = 2131034167;
+			// aapt resource value: 0x7f050036
+			public const int btnPSRCarrier = 2131034166;
 			
 			// aapt resource value: 0x7f050038
-			public const int btnPSRReturn = 2131034168;
+			public const int btnPSRIngresar = 2131034168;
 			
-			// aapt resource value: 0x7f050034
-			public const int btnPSRUser = 2131034164;
+			// aapt resource value: 0x7f050039
+			public const int btnPSRReturn = 2131034169;
 			
-			// aapt resource value: 0x7f050045
-			public const int btnPtcConfirm = 2131034181;
+			// aapt resource value: 0x7f050035
+			public const int btnPSRUser = 2131034165;
 			
 			// aapt resource value: 0x7f050046
-			public const int btnPtcReturn = 2131034182;
+			public const int btnPtcConfirm = 2131034182;
+			
+			// aapt resource value: 0x7f050047
+			public const int btnPtcReturn = 2131034183;
+			
+			// aapt resource value: 0x7f050052
+			public const int btnScReturn = 2131034194;
 			
 			// aapt resource value: 0x7f050051
-			public const int btnScReturn = 2131034193;
+			public const int btnScSearch = 2131034193;
 			
-			// aapt resource value: 0x7f050050
-			public const int btnScSearch = 2131034192;
+			// aapt resource value: 0x7f05005a
+			public const int btnUcrReturn = 2131034202;
 			
-			// aapt resource value: 0x7f05006b
-			public const int btnUrRegister = 2131034219;
+			// aapt resource value: 0x7f050074
+			public const int btnUrRegister = 2131034228;
 			
-			// aapt resource value: 0x7f05006c
-			public const int btnUrReturn = 2131034220;
+			// aapt resource value: 0x7f050075
+			public const int btnUrReturn = 2131034229;
 			
 			// aapt resource value: 0x7f05001c
 			public const int chkMRecord = 2131034140;
@@ -182,86 +185,95 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f050023
 			public const int lblMhMainTitle = 2131034147;
 			
-			// aapt resource value: 0x7f05002f
-			public const int lblPSRRegister = 2131034159;
+			// aapt resource value: 0x7f050030
+			public const int lblPSRRegister = 2131034160;
 			
-			// aapt resource value: 0x7f050036
-			public const int lblPSRSelectUserMsg = 2131034166;
+			// aapt resource value: 0x7f050037
+			public const int lblPSRSelectUserMsg = 2131034167;
 			
-			// aapt resource value: 0x7f050031
-			public const int lblPSRtypeOfUser = 2131034161;
+			// aapt resource value: 0x7f050032
+			public const int lblPSRtypeOfUser = 2131034162;
 			
-			// aapt resource value: 0x7f050040
-			public const int lblPtcCargoType = 2131034176;
+			// aapt resource value: 0x7f050041
+			public const int lblPtcCargoType = 2131034177;
 			
-			// aapt resource value: 0x7f05003c
-			public const int lblPtcDate = 2131034172;
+			// aapt resource value: 0x7f05003d
+			public const int lblPtcDate = 2131034173;
 			
-			// aapt resource value: 0x7f05003e
-			public const int lblPtcOriginDestiny = 2131034174;
+			// aapt resource value: 0x7f05003f
+			public const int lblPtcOriginDestiny = 2131034175;
 			
-			// aapt resource value: 0x7f05003a
-			public const int lblPtcUser = 2131034170;
+			// aapt resource value: 0x7f05003b
+			public const int lblPtcUser = 2131034171;
 			
-			// aapt resource value: 0x7f050042
-			public const int lblPtcValue = 2131034178;
+			// aapt resource value: 0x7f050043
+			public const int lblPtcValue = 2131034179;
 			
-			// aapt resource value: 0x7f05004c
-			public const int lblScCargoType = 2131034188;
+			// aapt resource value: 0x7f05004d
+			public const int lblScCargoType = 2131034189;
 			
-			// aapt resource value: 0x7f05004a
-			public const int lblScDestiny = 2131034186;
+			// aapt resource value: 0x7f05004b
+			public const int lblScDestiny = 2131034187;
+			
+			// aapt resource value: 0x7f050049
+			public const int lblScOrigin = 2131034185;
+			
+			// aapt resource value: 0x7f05004f
+			public const int lblScPriceRange = 2131034191;
 			
 			// aapt resource value: 0x7f050048
-			public const int lblScOrigin = 2131034184;
+			public const int lblScTitle = 2131034184;
 			
-			// aapt resource value: 0x7f05004e
-			public const int lblScPriceRange = 2131034190;
+			// aapt resource value: 0x7f050058
+			public const int lblUcrCurrentRating = 2131034200;
 			
-			// aapt resource value: 0x7f050047
-			public const int lblScTitle = 2131034183;
+			// aapt resource value: 0x7f050056
+			public const int lblUcrNumEv = 2131034198;
 			
-			// aapt resource value: 0x7f050067
-			public const int lblUrAddress = 2131034215;
+			// aapt resource value: 0x7f050054
+			public const int lblUcrUser = 2131034196;
 			
-			// aapt resource value: 0x7f050057
-			public const int lblUrAlias = 2131034199;
+			// aapt resource value: 0x7f050070
+			public const int lblUrAddress = 2131034224;
 			
-			// aapt resource value: 0x7f050061
-			public const int lblUrCodArea = 2131034209;
+			// aapt resource value: 0x7f050060
+			public const int lblUrAlias = 2131034208;
 			
-			// aapt resource value: 0x7f050069
-			public const int lblUrComuna = 2131034217;
+			// aapt resource value: 0x7f05006a
+			public const int lblUrCodArea = 2131034218;
 			
-			// aapt resource value: 0x7f05005d
-			public const int lblUrLicenceNumber = 2131034205;
+			// aapt resource value: 0x7f050072
+			public const int lblUrComuna = 2131034226;
 			
-			// aapt resource value: 0x7f050065
-			public const int lblUrMail = 2131034213;
+			// aapt resource value: 0x7f050066
+			public const int lblUrLicenceNumber = 2131034214;
 			
-			// aapt resource value: 0x7f050059
-			public const int lblUrPass = 2131034201;
+			// aapt resource value: 0x7f05006e
+			public const int lblUrMail = 2131034222;
 			
-			// aapt resource value: 0x7f05005f
-			public const int lblUrPhone = 2131034207;
+			// aapt resource value: 0x7f050062
+			public const int lblUrPass = 2131034210;
 			
-			// aapt resource value: 0x7f050063
-			public const int lblUrPhone2 = 2131034211;
+			// aapt resource value: 0x7f050068
+			public const int lblUrPhone = 2131034216;
 			
-			// aapt resource value: 0x7f050052
-			public const int lblUrTitle = 2131034194;
+			// aapt resource value: 0x7f05006c
+			public const int lblUrPhone2 = 2131034220;
 			
 			// aapt resource value: 0x7f05005b
-			public const int lblUrTypeOfTruck = 2131034203;
+			public const int lblUrTitle = 2131034203;
 			
-			// aapt resource value: 0x7f050055
-			public const int lblUrUserLastName = 2131034197;
+			// aapt resource value: 0x7f050064
+			public const int lblUrTypeOfTruck = 2131034212;
 			
-			// aapt resource value: 0x7f050053
-			public const int lblUrUserName = 2131034195;
+			// aapt resource value: 0x7f05005e
+			public const int lblUrUserLastName = 2131034206;
 			
-			// aapt resource value: 0x7f050033
-			public const int linearLayout1 = 2131034163;
+			// aapt resource value: 0x7f05005c
+			public const int lblUrUserName = 2131034204;
+			
+			// aapt resource value: 0x7f050034
+			public const int linearLayout1 = 2131034164;
 			
 			// aapt resource value: 0x7f050000
 			public const int lstAc = 2131034112;
@@ -269,14 +281,20 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f050001
 			public const int lstAcAwarded = 2131034113;
 			
+			// aapt resource value: 0x7f05002e
+			public const int lstPcPerformed = 2131034158;
+			
+			// aapt resource value: 0x7f050031
+			public const int psrSpc2 = 2131034161;
+			
 			// aapt resource value: 0x7f05002d
-			public const int lstPcPerformed = 2131034157;
+			public const int rtgPcRating = 2131034157;
 			
-			// aapt resource value: 0x7f050030
-			public const int psrSpc2 = 2131034160;
+			// aapt resource value: 0x7f050059
+			public const int rtgUcrRating = 2131034201;
 			
-			// aapt resource value: 0x7f050032
-			public const int spcPSR3 = 2131034162;
+			// aapt resource value: 0x7f050033
+			public const int spcPSR3 = 2131034163;
 			
 			// aapt resource value: 0x7f05000a
 			public const int sprCpCargoType = 2131034122;
@@ -290,23 +308,23 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f05000c
 			public const int sprCpPriceRange = 2131034124;
 			
-			// aapt resource value: 0x7f05004d
-			public const int sprScCargoType = 2131034189;
+			// aapt resource value: 0x7f05004e
+			public const int sprScCargoType = 2131034190;
 			
-			// aapt resource value: 0x7f05004b
-			public const int sprScDestiny = 2131034187;
+			// aapt resource value: 0x7f05004c
+			public const int sprScDestiny = 2131034188;
 			
-			// aapt resource value: 0x7f050049
-			public const int sprScOrigin = 2131034185;
+			// aapt resource value: 0x7f05004a
+			public const int sprScOrigin = 2131034186;
 			
-			// aapt resource value: 0x7f05004f
-			public const int sprScPriceRange = 2131034191;
+			// aapt resource value: 0x7f050050
+			public const int sprScPriceRange = 2131034192;
 			
-			// aapt resource value: 0x7f05006a
-			public const int sprUrCity = 2131034218;
+			// aapt resource value: 0x7f050073
+			public const int sprUrCity = 2131034227;
 			
-			// aapt resource value: 0x7f05005c
-			public const int sprUrTypeOfTruck = 2131034204;
+			// aapt resource value: 0x7f050065
+			public const int sprUrTypeOfTruck = 2131034213;
 			
 			// aapt resource value: 0x7f05001d
 			public const int tblMLayout1 = 2131034141;
@@ -329,8 +347,8 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f050016
 			public const int txtMWelcomeUser = 2131034134;
 			
-			// aapt resource value: 0x7f05002e
-			public const int txtPSRWelcomeUser = 2131034158;
+			// aapt resource value: 0x7f05002f
+			public const int txtPSRWelcomeUser = 2131034159;
 			
 			// aapt resource value: 0x7f05002b
 			public const int txtPcCargoType = 2131034155;
@@ -347,56 +365,65 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f05002c
 			public const int txtPcValue = 2131034156;
 			
-			// aapt resource value: 0x7f050041
-			public const int txtPtcCargoType = 2131034177;
+			// aapt resource value: 0x7f050042
+			public const int txtPtcCargoType = 2131034178;
 			
-			// aapt resource value: 0x7f05003d
-			public const int txtPtcDate = 2131034173;
+			// aapt resource value: 0x7f05003e
+			public const int txtPtcDate = 2131034174;
+			
+			// aapt resource value: 0x7f050045
+			public const int txtPtcInfo = 2131034181;
+			
+			// aapt resource value: 0x7f050040
+			public const int txtPtcOriginDestiny = 2131034176;
+			
+			// aapt resource value: 0x7f05003c
+			public const int txtPtcUser = 2131034172;
 			
 			// aapt resource value: 0x7f050044
-			public const int txtPtcInfo = 2131034180;
+			public const int txtPtcValue = 2131034180;
 			
-			// aapt resource value: 0x7f05003f
-			public const int txtPtcOriginDestiny = 2131034175;
+			// aapt resource value: 0x7f05003a
+			public const int txtPtcWelcomeUser = 2131034170;
 			
-			// aapt resource value: 0x7f05003b
-			public const int txtPtcUser = 2131034171;
+			// aapt resource value: 0x7f050057
+			public const int txtUcrNumEv = 2131034199;
 			
-			// aapt resource value: 0x7f050043
-			public const int txtPtcValue = 2131034179;
+			// aapt resource value: 0x7f050055
+			public const int txtUcrUser = 2131034197;
 			
-			// aapt resource value: 0x7f050039
-			public const int txtPtcWelcomeUser = 2131034169;
+			// aapt resource value: 0x7f050053
+			public const int txtUcrWelcomeUser = 2131034195;
 			
-			// aapt resource value: 0x7f050068
-			public const int txtUrAddress = 2131034216;
+			// aapt resource value: 0x7f050071
+			public const int txtUrAddress = 2131034225;
 			
-			// aapt resource value: 0x7f050058
-			public const int txtUrAlias = 2131034200;
+			// aapt resource value: 0x7f050061
+			public const int txtUrAlias = 2131034209;
 			
-			// aapt resource value: 0x7f050062
-			public const int txtUrCodArea = 2131034210;
+			// aapt resource value: 0x7f05006b
+			public const int txtUrCodArea = 2131034219;
 			
-			// aapt resource value: 0x7f05005e
-			public const int txtUrLicenceNumber = 2131034206;
+			// aapt resource value: 0x7f050067
+			public const int txtUrLicenceNumber = 2131034215;
 			
-			// aapt resource value: 0x7f050066
-			public const int txtUrMail = 2131034214;
+			// aapt resource value: 0x7f05006f
+			public const int txtUrMail = 2131034223;
 			
-			// aapt resource value: 0x7f05005a
-			public const int txtUrPassword = 2131034202;
+			// aapt resource value: 0x7f050063
+			public const int txtUrPassword = 2131034211;
 			
-			// aapt resource value: 0x7f050060
-			public const int txtUrPhone = 2131034208;
+			// aapt resource value: 0x7f050069
+			public const int txtUrPhone = 2131034217;
 			
-			// aapt resource value: 0x7f050064
-			public const int txtUrPhone2 = 2131034212;
+			// aapt resource value: 0x7f05006d
+			public const int txtUrPhone2 = 2131034221;
 			
-			// aapt resource value: 0x7f050056
-			public const int txtUrUserLastName = 2131034198;
+			// aapt resource value: 0x7f05005f
+			public const int txtUrUserLastName = 2131034207;
 			
-			// aapt resource value: 0x7f050054
-			public const int txtUrUserName = 2131034196;
+			// aapt resource value: 0x7f05005d
+			public const int txtUrUserName = 2131034205;
 			
 			static Id()
 			{
@@ -451,7 +478,10 @@ namespace AppCargoExpressFinal
 			public const int SearchCargoes = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int UserRegister = 2130903053;
+			public const int UserCurrentRating = 2130903053;
+			
+			// aapt resource value: 0x7f03000e
+			public const int UserRegister = 2130903054;
 			
 			static Layout()
 			{

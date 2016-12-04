@@ -19,8 +19,8 @@ namespace AppCargoExpressFinal.controller
 
         private List<PerformedCargoes> mItems = new List<PerformedCargoes>()
         {
-            new PerformedCargoes ("Roberto Hidalgo","03/11/2016","Pto. Montt - Chiloé","Artículo Hogar","$150.000"),
-            new PerformedCargoes ("Cristian Aparicio","04/11/2016","Pta. Arenas - Coyhaique","Mudanza","$200.000")
+            new PerformedCargoes ("Roberto Hidalgo","03/11/2016","Pto. Montt - Chiloé","Artículo Hogar","$150.000",4),
+            new PerformedCargoes ("Cristian Aparicio","04/11/2016","Pta. Arenas - Coyhaique","Mudanza","$200.000",3)
         };
         private ListView mListView;
         private Button btnVolver;

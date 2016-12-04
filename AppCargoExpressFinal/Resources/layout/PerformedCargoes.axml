@@ -54,4 +54,13 @@
         android:textStyle="bold"
         android:typeface="normal"
         android:gravity="center" />
+    <RatingBar
+        android:id="@+id/rtgPcRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/ratingBarStyleSmall"
+        android:numStars="5"
+        android:stepSize="0.1"
+        android:isIndicator="true"
+        android:layout_gravity="center" />
 </LinearLayout>

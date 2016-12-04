@@ -78,6 +78,7 @@
   <ItemGroup>
     <Compile Include="AuthService.cs" />
     <Compile Include="controller\AwardedCargoesActivity.cs" />
+    <Compile Include="controller\CurrentRatingActivity.cs" />
     <Compile Include="controller\LoginUserActivity.cs" />
     <Compile Include="controller\MainActivity.cs" />
     <Compile Include="controller\MainHistoricalActivity.cs" />
@@ -132,6 +133,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\CargoesPublish.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserCurrentRating.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

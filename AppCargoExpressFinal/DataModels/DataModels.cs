@@ -130,18 +130,18 @@ namespace AppCargoExpressFinal.DataModels
 
         public static List<PerformedCargoes> mItems = new List<PerformedCargoes>()
         {
-            new PerformedCargoes ("Esteban Dido","07/11/2016","Algarrobo - Alhue","Industial","$180.000"),
-            new PerformedCargoes ("Armando Casas","05/11/2016","Pto. Montt - Santiago","Mudanza","$300.000"),
-            new PerformedCargoes ("Julio Rodriguez","06/11/2016","Santiago - Arica","Artículo Hogar","$100.000"),
-            new PerformedCargoes ("Beto Cuevas","07/11/2016","Coquimbo - Concepcion","Industial","$190.000"),
-            new PerformedCargoes ("Arturo Prat","08/11/2016","Concepcion - Temuco","Carga Peligrosa","$210.000"),
-            new PerformedCargoes ("Pablo Neruda","16/11/2016","Osorno - Lanco","Vehículos Mayores","$90.000"),
-            new PerformedCargoes ("Eduardo Oses","15/11/2016","Concepcion - Temuco","Vehículos Menores","$80.000"),
-            new PerformedCargoes ("Daniel Fuentes","15/11/2016","Concepcion - Temuco","Vehículos Menores","$100.000"),
-            new PerformedCargoes ("Esteban Sepúlveda","17/11/2016","Lanco - Valdivia","Carga Peligrosa","$50.000"),
-            new PerformedCargoes ("Marcos Gutierrez","18/11/2016","Valdivia - Pto. Montt","Carga Peligrosa","$230.000"),
-            new PerformedCargoes ("Rodrigo Campos","19/11/2016","Pto. Montt - Chiloe","Artículo Hogar","$50.000"),
-            new PerformedCargoes ("Renier Gonzalez","20/11/2016","Pta. Arenas - Cohyaique","Mudanza","$200.000")
+            new PerformedCargoes ("Esteban Dido","07/11/2016","Algarrobo - Alhue","Industial","$180.000",3.4f),
+            new PerformedCargoes ("Armando Casas","05/11/2016","Pto. Montt - Santiago","Mudanza","$300.000",4.1f),
+            new PerformedCargoes ("Julio Rodriguez","06/11/2016","Santiago - Arica","Artículo Hogar","$100.000",4.6f),
+            new PerformedCargoes ("Beto Cuevas","07/11/2016","Coquimbo - Concepcion","Industial","$190.000",3),
+            new PerformedCargoes ("Arturo Prat","08/11/2016","Concepcion - Temuco","Carga Peligrosa","$210.000",1.6f),
+            new PerformedCargoes ("Pablo Neruda","16/11/2016","Osorno - Lanco","Vehículos Mayores","$90.000",3.2f),
+            new PerformedCargoes ("Eduardo Oses","15/11/2016","Concepcion - Temuco","Vehículos Menores","$80.000",4.5f),
+            new PerformedCargoes ("Daniel Fuentes","15/11/2016","Concepcion - Temuco","Vehículos Menores","$100.000",2.8f),
+            new PerformedCargoes ("Esteban Sepúlveda","17/11/2016","Lanco - Valdivia","Carga Peligrosa","$50.000",5),
+            new PerformedCargoes ("Marcos Gutierrez","18/11/2016","Valdivia - Pto. Montt","Carga Peligrosa","$230.000",4.8f),
+            new PerformedCargoes ("Rodrigo Campos","19/11/2016","Pto. Montt - Chiloe","Artículo Hogar","$50.000",2),
+            new PerformedCargoes ("Renier Gonzalez","20/11/2016","Pta. Arenas - Cohyaique","Mudanza","$200.000",4)
         };
 
         public static Dictionary<string, string> PriceRangeAndId = new Dictionary<string, string>

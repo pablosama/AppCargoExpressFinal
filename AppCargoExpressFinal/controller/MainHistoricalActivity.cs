@@ -45,7 +45,8 @@ namespace AppCargoExpressFinal.controller
 
         private void BtnVerReputacion_Click(object sender, EventArgs e)
         {
-           
+            Intent nextScreen = new Intent(this, typeof(CurrentRatingActivity));
+            StartActivity(nextScreen);
         }
 
         private void BtnCargasAdjudicadas_Click(object sender, EventArgs e)

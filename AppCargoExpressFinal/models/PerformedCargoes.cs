@@ -20,14 +20,16 @@ namespace AppCargoExpressFinal.models
         public string origenDestino;
         public string tipoCarga;
         public string monto;
+        public float rating;
         
-        public PerformedCargoes(string usuario, string fecha, string origenDestino,string tipoCarga, string monto)
+        public PerformedCargoes(string usuario, string fecha, string origenDestino,string tipoCarga, string monto, float rating)
         {
             this.usuario = usuario;
             this.fecha = fecha;
             this.origenDestino = origenDestino;
             this.tipoCarga = tipoCarga;
             this.monto = monto;
+            this.rating = rating;
         } 
 
         public string getUsuario()
@@ -83,6 +85,16 @@ namespace AppCargoExpressFinal.models
         public void setMonto(string monto)
         {
             this.monto = monto;
+        }
+
+        public float getRating()
+        {
+            return rating;
+        }
+
+        public void setRating(float rating)
+        {
+            this.rating = rating;
         }
     }
 }

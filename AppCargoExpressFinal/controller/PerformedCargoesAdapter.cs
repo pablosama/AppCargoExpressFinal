@@ -69,6 +69,9 @@ namespace AppCargoExpressFinal.controller
             TextView monto = row.FindViewById<TextView>(Resource.Id.txtPcValue);
             monto.Text = mItems[position].getMonto().ToString();
 
+            RatingBar rating = row.FindViewById<RatingBar>(Resource.Id.rtgPcRating);
+            rating.Rating = mItems[position].getRating();
+            rating.Enabled = false;
 
             return row;
         }
