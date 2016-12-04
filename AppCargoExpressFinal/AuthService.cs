@@ -15,7 +15,7 @@ namespace AppCargoExpressFinal
 {
     public static class AuthService
     {
-        public static string UserName
+        public static string Alias
         {
             get
             {
@@ -60,6 +60,83 @@ namespace AppCargoExpressFinal
             }
         }
 
+        #region other data
+        public static string LastName
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["LastName"] : null;
+            }
+        }
+        public static string PhoneNumber
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["PhoneNumber"] : null;
+            }
+        }
+        public static string CodArea
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["CodArea"] : null;
+            }
+        }
+        public static string Phone
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["Phone"] : null;
+            }
+        }
+        public static string Mail
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["Mail"] : null;
+            }
+        }
+        public static string Address
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["Address"] : null;
+            }
+        }
+        public static string City
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["City"] : null;
+            }
+        }
+        public static string LicenceNumber
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["UserType"] : null;
+            }
+        }
+        public static string TypOfVehicle
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? account.Properties["TypOfVehicle"] : null;
+            }
+        }
+        #endregion
+
+
+
 
 
         public static void DeleteCredentials()
@@ -96,14 +173,14 @@ namespace AppCargoExpressFinal
                 account.Properties.Add("Name", name);
                 account.Properties.Add("LastName", lastName);
                 account.Properties.Add("phoneNumber", phoneNumber);
-                account.Properties.Add("codArea", codArea);
-                account.Properties.Add("phone", phone);
-                account.Properties.Add("mail", mail);
-                account.Properties.Add("address", address);
-                account.Properties.Add("city", city);
-                account.Properties.Add("userType", userType.ToString());
-                account.Properties.Add("licenceNumber", licenceNumber);
-                account.Properties.Add("typOfVehicle", typOfVehicle);
+                account.Properties.Add("CodArea", codArea);
+                account.Properties.Add("Phone", phone);
+                account.Properties.Add("Mail", mail);
+                account.Properties.Add("Address", address);
+                account.Properties.Add("City", city);
+                account.Properties.Add("UserType", userType.ToString());
+                account.Properties.Add("LicenceNumber", licenceNumber);
+                account.Properties.Add("TypOfVehicle", typOfVehicle);
                 AccountStore.Create(Application.Context).Save(account, Application.Context.ToString());
             }
         }

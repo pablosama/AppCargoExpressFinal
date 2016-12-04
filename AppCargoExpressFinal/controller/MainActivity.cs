@@ -53,7 +53,6 @@ namespace AppCargoExpressFinal.controller
             this.FinishAffinity();
         }
    
-
         //modal for upload/download data
         private void DisplayProgressBar()
         {

@@ -20,15 +20,47 @@ namespace AppCargoExpressFinal.controller
         private Button btnReturn;
         private ProgressDialog progressBar;
         private Spinner spnUrCity;
+        private int typeOfUser;
+        private TextView lblUrLicenceNumber;
+        private TextView lblUrTypeOfTruck;
+        private EditText txtUrLicenceNumber;
+        private Spinner spnUrTypeOfTruck;
+        private TextView lblUrTitle;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.UserRegister);
-            // Create your application here         
+            // Create your application here      
+          
+            typeOfUser = int.Parse(Intent.GetStringExtra("typeOfUser"));
             btnRegister = FindViewById<Button>(Resource.Id.btnUrRegister);
             btnReturn = FindViewById<Button>(Resource.Id.btnUrReturn);
             spnUrCity = FindViewById<Spinner>(Resource.Id.sprUrCity);
+
+            lblUrLicenceNumber = FindViewById<TextView>(Resource.Id.lblUrLicenceNumber);
+            lblUrTypeOfTruck = FindViewById<TextView>(Resource.Id.lblUrTypeOfTruck);
+            lblUrTitle = FindViewById<TextView>(Resource.Id.lblUrTitle);
+            txtUrLicenceNumber = FindViewById<EditText>(Resource.Id.txtUrLicenceNumber);
+            spnUrTypeOfTruck = FindViewById<Spinner>(Resource.Id.sprUrTypeOfTruck);
+
+            if (typeOfUser == 1)
+            {
+                lblUrLicenceNumber.Visibility = ViewStates.Gone;
+                lblUrTypeOfTruck.Visibility = ViewStates.Gone;
+                txtUrLicenceNumber.Visibility = ViewStates.Gone;
+                spnUrTypeOfTruck.Visibility = ViewStates.Gone;
+                lblUrTitle.Text = "Formulario Creación Usuario";
+            }
+            else
+            {
+                ArrayAdapter<string> truckTypeAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, DataModels.DataModels.TruckTypes.Select(o => o.Value).ToList());
+                truckTypeAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                spnUrTypeOfTruck.Adapter = truckTypeAdapter;
+                lblUrTitle.Text = "Formulario Creación Transportista";
+            }
+
+
             ArrayAdapter<string> cityAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, DataModels.DataModels.Cities);
             cityAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spnUrCity.Adapter = cityAdapter;
@@ -106,12 +138,28 @@ namespace AppCargoExpressFinal.controller
             EditText txtAdress = FindViewById<EditText>(Resource.Id.txtUrAddress);
             Spinner spnCity = FindViewById<Spinner>(Resource.Id.sprUrCity);
 
-            if(!string.IsNullOrEmpty(txtName.Text.Trim()) && !string.IsNullOrEmpty(txtLastName.Text.Trim()) && 
+            var spnUrTypeOfTruckSelectedItem = spnUrTypeOfTruck.SelectedItem.ToString();
+            if (!string.IsNullOrEmpty(txtName.Text.Trim()) && !string.IsNullOrEmpty(txtLastName.Text.Trim()) && 
                !string.IsNullOrEmpty(txtAlias.Text.Trim()) && !string.IsNullOrEmpty(txtMovilPhone.Text.Trim()) &&
                !string.IsNullOrEmpty(txtMail.Text.Trim()) && !string.IsNullOrEmpty(txtAdress.Text.Trim()) &&
                !string.IsNullOrEmpty(txtPass.Text.Trim()))
             {
-                model = new DataModels.DataModels.Usuario(txtAlias.Text, txtPass.Text,txtName.Text, txtLastName.Text, 1,txtMovilPhone.Text, txtCodArea.Text, txtMail.Text, spnUrCity.SelectedItem.ToString(), txtAdress.Text, DateTime.Now, DateTime.Now,txtPhone2.ToString());
+                model = new DataModels.DataModels.Usuario(
+                    txtAlias.Text, 
+                    txtPass.Text,
+                    txtName.Text, 
+                    txtLastName.Text, 
+                    typeOfUser,
+                    txtMovilPhone.Text, 
+                    txtCodArea.Text, 
+                    txtMail.Text, 
+                    spnUrCity.SelectedItem.ToString(), 
+                    txtAdress.Text, 
+                    DateTime.Now, 
+                    DateTime.Now,
+                    txtPhone2.ToString(),
+                    txtUrLicenceNumber.Text,
+                    spnUrTypeOfTruckSelectedItem ?? "");
             }
 
             return model;

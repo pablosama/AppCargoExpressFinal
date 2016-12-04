@@ -16,11 +16,11 @@
             android:minWidth="25px"
             android:minHeight="25px">
             <TextView
-                android:text="Formulario Creación Usuario"
+                android:text=""
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView1"
+                android:id="@+id/lblUrTitle"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:typeface="normal"
@@ -93,6 +93,39 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtUrPassword"
                 android:hint="ingrese contraseña"
+                android:background="#808080"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:text="Tipo de Camión:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblUrTypeOfTruck"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <Spinner
+                android:id="@+id/sprUrTypeOfTruck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:text="Número de Licencia:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblUrLicenceNumber"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtUrLicenceNumber"
+                android:shadowColor="#f0f8ffff"
+                android:hint="alias"
                 android:background="#808080"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp" />

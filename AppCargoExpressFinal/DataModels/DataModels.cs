@@ -51,7 +51,9 @@ namespace AppCargoExpressFinal.DataModels
                 string direccion, 
                 DateTime fechaCreacion, 
                 DateTime fechaActualizacion, 
-                string telefonoFijo)
+                string telefonoFijo,
+                string licenceNumber = "",
+                string typOfVehicle = "")
             {
                 this.alias = alias;
                 this.contrasena = contrasena;
@@ -72,13 +74,13 @@ namespace AppCargoExpressFinal.DataModels
         }
 
         private List<Usuario> usuarios = new List<Usuario> {
-            new Usuario("davalos","1234","Patrick","Arancibia",2,"98765432","+569","patrick.arancibia@gmail.com","Temuco","Dirección n°1",DateTime.Parse("2015-12-05"),DateTime.Parse("2016-06-05"),"225337"),
+            new Usuario("davalos","1234","Patrick","Arancibia",2,"98765432","+569","patrick.arancibia@gmail.com","Temuco","Dirección n°1",DateTime.Parse("2015-12-05"),DateTime.Parse("2016-06-05"),"225337","","Camioneta con Remolque"),
             new Usuario("minimi","1234","Hans","Rubio",1,"94764381","+569","hans.rubio@gmail.com","Talca","Dirección n°2",DateTime.Parse("2015-07-05"),DateTime.Parse("2016-04-03"),"225338"),
             new Usuario("undertaker","1234","David","Vasquez",1,"76543289","+569","david.vasquez@gmail.com","Coyhaique","Dirección n°3",DateTime.Parse("2015-08-01"),DateTime.Parse("2016-01-01"),"225339"),
-            new Usuario("evita","Pablo","1234","Romero",2,"46798725","+569","pablo.romero@gmail.com","Curacautín","Dirección n°4",DateTime.Parse("2016-10-05"),DateTime.Parse("2016-11-25"),"225340"),
-            new Usuario("jafar","Francisco","1234","Fernandez",2,"76543213","+569","francisco.fernandez@gmail.com","Traiguén","Dirección n°5",DateTime.Parse("2010-12-03"),DateTime.Parse("2016-03-08"),"225341"),
+            new Usuario("evita","Pablo","1234","Romero",2,"46798725","+569","pablo.romero@gmail.com","Curacautín","Dirección n°4",DateTime.Parse("2016-10-05"),DateTime.Parse("2016-11-25"),"225340","","Liviano de Carga"),
+            new Usuario("jafar","Francisco","1234","Fernandez",2,"76543213","+569","francisco.fernandez@gmail.com","Traiguén","Dirección n°5",DateTime.Parse("2010-12-03"),DateTime.Parse("2016-03-08"),"225341","","Camión Carga Pesada"),
             new Usuario("palOtrolado","1234","Fernando","Lillo",1,"56781235","+569","fernando.lillo@gmail.com","Temuco","Dirección n°6",DateTime.Parse("2015-12-05"),DateTime.Parse("2016-06-05"),"225342"),
-            new Usuario("pablosama","4321","Pablo","Pérez",2,"98765432","+569","pablo.perez@gmail.com","Lautaro","Dirección n°7",DateTime.Parse("2016-12-05"),DateTime.Parse("2016-12-02"),"225343"),
+            new Usuario("pablosama","4321","Pablo","Pérez",2,"98765432","+569","pablo.perez@gmail.com","Lautaro","Dirección n°7",DateTime.Parse("2016-12-05"),DateTime.Parse("2016-12-02"),"225343","","Tractor Camión + Semi Remolque >= 5 ejes"),
             new Usuario("huaso","1234","Angelo","Venegas",1,"65437891","+569","angelo.venegas@gmail.com","Purén","Dirección n°8",DateTime.Parse("2013-12-05"),DateTime.Parse("2016-01-08"),"225344"),
             new Usuario("skynner","1234","Jaime","Vargas",1,"23458764","+569","jaime.vargas@gmail.com","Temuco","Dirección n°9",DateTime.Parse("2015-12-05"),DateTime.Parse("2016-03-09"),"225345"),
             };
@@ -113,6 +115,17 @@ namespace AppCargoExpressFinal.DataModels
             { 5, "Industial" },
             { 6, "Carga Peligrosa" },
             { 7, "Todas" }
+        };
+
+        public static Dictionary<int, string> TruckTypes = new Dictionary<int, string>
+        {
+            { 1, "Camioneta con Remolque"},
+            { 2, "Liviano de Carga" },
+            { 3, "Camión de Carga" },
+            { 4, "Camión Carga Pesada" },
+            { 5, "Tractor Camión + Semi Remolque >= 5 ejes" },
+            { 6, "Camión + Remolque <= 4 ejes " },
+            { 7, "Camión + Remolque >= 5 ejes " }
         };
 
         public static List<PerformedCargoes> mItems = new List<PerformedCargoes>()

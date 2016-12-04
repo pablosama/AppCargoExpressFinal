@@ -21,6 +21,7 @@ namespace AppCargoExpressFinal.controller
         private TextView lblInfoAfterSelect;
         private Button btnIngresar;
         private Button btnVolver;
+        private int typeOfUser;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -48,6 +49,7 @@ namespace AppCargoExpressFinal.controller
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
             Intent nextScreen = new Intent(this, typeof(UserRegisterActivity));
+            nextScreen.PutExtra("typeOfUser", typeOfUser.ToString());
             StartActivity(nextScreen);
         }
 
@@ -56,6 +58,7 @@ namespace AppCargoExpressFinal.controller
             //lblInfoAfterSelect.Visibility = ViewStates.Invisible;
             lblInfoAfterSelect.Text = "has seleccionado Transportista";
             btnIngresar.Visibility = ViewStates.Visible;
+            typeOfUser = 2;
         }
 
         private void BtnUser_Click(object sender, EventArgs e)
@@ -63,7 +66,7 @@ namespace AppCargoExpressFinal.controller
             // lblInfoAfterSelect.Visibility = ViewStates.Invisible;
             lblInfoAfterSelect.Text = "has seleccionado Usuario";
             btnIngresar.Visibility = ViewStates.Visible;
-           
+            typeOfUser = 1;
         }
     }
 }
