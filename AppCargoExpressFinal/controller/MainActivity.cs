@@ -12,7 +12,7 @@ using System.Collections.Generic;
 
 namespace AppCargoExpressFinal.controller
 {
-    [Activity(Label = "AppCargo", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.NoTitleBar")]
+    [Activity(Label = "AppCargo", MainLauncher = true, Icon = "@drawable/cargoExpress", Theme = "@android:style/Theme.NoTitleBar")]
     public class MainActivity : Activity
     {
 
