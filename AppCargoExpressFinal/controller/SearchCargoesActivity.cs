@@ -22,6 +22,7 @@ namespace AppCargoExpressFinal.controller
         private Spinner spnDestiny;
         private Spinner spnCargoType;
         private Spinner spnPriceRange;
+        private TextView lblTitle;
         private int typeOfUser;
        
         protected override void OnCreate(Bundle savedInstanceState)
@@ -40,6 +41,17 @@ namespace AppCargoExpressFinal.controller
         private void InitComponents()
         {
             typeOfUser = int.Parse(AuthService.UserType);
+
+            lblTitle = FindViewById<TextView>(Resource.Id.lblScTitle);
+
+            if(typeOfUser == 1)
+            {
+                lblTitle.Text = "BÚSQUEDA DE VIAJE";
+            }
+            else
+            {
+                lblTitle.Text = "BÚSQUEDA DE CARGA";
+            }
 
             spnOrigin = FindViewById<Spinner>(Resource.Id.sprScOrigin);
             spnDestiny = FindViewById<Spinner>(Resource.Id.sprScDestiny);

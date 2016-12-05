@@ -9,4 +9,5 @@
   <string name="AwardedCargoesTitle">Historial Cargas Adjudicadas</string>
   <string name="PerformedCargoesTitle">Historial Cargas Realizadas</string>
   <string name="PublishedTripTitle">Viajes Encontrados</string>
+  <string name="PublishedCargoesTitle">Cargas Encontradas</string>
 </resources>

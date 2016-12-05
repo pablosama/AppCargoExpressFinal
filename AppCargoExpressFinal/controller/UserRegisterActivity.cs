@@ -103,6 +103,7 @@ namespace AppCargoExpressFinal.controller
                     if(isValidUser)
                     {
                         data.SetUser(user);
+                        AuthService.SaveCredentials(user);
                     }
                     Toast.MakeText(this, !isValidForm ? 
                                          "Complete los datos del formulario":
@@ -138,7 +139,7 @@ namespace AppCargoExpressFinal.controller
             EditText txtAdress = FindViewById<EditText>(Resource.Id.txtUrAddress);
             Spinner spnCity = FindViewById<Spinner>(Resource.Id.sprUrCity);
 
-            var spnUrTypeOfTruckSelectedItem = spnUrTypeOfTruck.SelectedItem.ToString();
+            var spnUrTypeOfTruckSelectedItem = spnUrTypeOfTruck.SelectedItem;
             if (!string.IsNullOrEmpty(txtName.Text.Trim()) && !string.IsNullOrEmpty(txtLastName.Text.Trim()) && 
                !string.IsNullOrEmpty(txtAlias.Text.Trim()) && !string.IsNullOrEmpty(txtMovilPhone.Text.Trim()) &&
                !string.IsNullOrEmpty(txtMail.Text.Trim()) && !string.IsNullOrEmpty(txtAdress.Text.Trim()) &&
@@ -157,9 +158,11 @@ namespace AppCargoExpressFinal.controller
                     txtAdress.Text, 
                     DateTime.Now, 
                     DateTime.Now,
-                    txtPhone2.ToString(),
+                    txtPhone2.Text,
+                    0,
                     txtUrLicenceNumber.Text,
-                    spnUrTypeOfTruckSelectedItem ?? "");
+                    spnUrTypeOfTruckSelectedItem != null ? spnUrTypeOfTruckSelectedItem.ToString() : "",
+                    0f);
             }
 
             return model;

@@ -40,7 +40,7 @@ namespace AppCargoExpressFinal.controller
             LayoutInflater inflater = (LayoutInflater)this.GetSystemService(Context.LayoutInflaterService);
             View headerView = inflater.Inflate(Resource.Layout.CargoesHeader, null);
             TextView lblTextHeader = (TextView)headerView.FindViewById<TextView>(Resource.Id.lblChTitleList);
-            lblTextHeader.SetText(Resource.String.PublishedTripTitle);
+            lblTextHeader.SetText(typeOfUser == 1 ?Resource.String.PublishedTripTitle : Resource.String.PublishedCargoesTitle);
 
             View footerView = inflater.Inflate(Resource.Layout.CargoesFooter, null);
             var data = new DataModels.DataModels();

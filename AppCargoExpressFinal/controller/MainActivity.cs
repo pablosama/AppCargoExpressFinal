@@ -29,16 +29,27 @@ namespace AppCargoExpressFinal.controller
 
             SetContentView(Resource.Layout.Main);
 
-            txtUserName = FindViewById<EditText>(Resource.Id.txtMUserName);
-            lblRegister = FindViewById<TextView> (Resource.Id.lblMRegister);
+            var user = AuthService.GetCredentials();
+            if(!string.IsNullOrEmpty(user.alias) && !string.IsNullOrEmpty(AuthService.Alias))
+            {
+                Intent nextScreen = new Intent(this, typeof(LoginUserActivity));
+                StartActivity(nextScreen);
+            }
+            else
+            {
+                txtUserName = FindViewById<EditText>(Resource.Id.txtMUserName);
+                lblRegister = FindViewById<TextView>(Resource.Id.lblMRegister);
 
-            lblRegister.Click += new EventHandler(this.RegisterOnClick);
+                lblRegister.Click += new EventHandler(this.RegisterOnClick);
 
-            btnLogin = FindViewById<Button>(Resource.Id.btnMLogin);
-            btnLogin.Click += BtnLogin_Click;
+                btnLogin = FindViewById<Button>(Resource.Id.btnMLogin);
+                btnLogin.Click += BtnLogin_Click;
 
-            btnLogout = FindViewById<Button>(Resource.Id.btnMLogout);
-            btnLogout.Click += BtnLogout_Click;
+                btnLogout = FindViewById<Button>(Resource.Id.btnMLogout);
+                btnLogout.Click += BtnLogout_Click;
+            }
+
+          
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -114,21 +125,8 @@ namespace AppCargoExpressFinal.controller
                                 //TODO: here add service conection for user validation
                                 //if is correct then save the credencials in app
                                 var userData = dataModels.GetUser(user, pass);
-                               
-                                AuthService.SaveCredentials(
-                                    userData.alias, 
-                                    userData.contrasena, 
-                                    userData.nombre,
-                                    userData.apellido,
-                                    userData.telefonoMovil,
-                                    userData.codigoArea,
-                                    userData.telefonoFijo, 
-                                    userData.mail,
-                                    userData.direccion,
-                                    userData.comuna,
-                                    userData.tipoUsuario,
-                                    userData.licenceNumber,
-                                    userData.typOfVehicle);
+                                AuthService.SaveCredentials(userData);
+                             
                                 Intent nextScreen = new Intent(this, typeof(LoginUserActivity));                                                         
                                 StartActivity(nextScreen);
                             });

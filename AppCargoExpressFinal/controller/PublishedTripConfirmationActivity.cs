@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace AppCargoExpressFinal.controller
 {
-    [Activity(Label = "PublishedTripConfirmationActivity")]
+    [Activity(Label = "PublishedTripConfirmationActivity", Theme = "@android:style/Theme.NoTitleBar")]
     public class PublishedTripConfirmationActivity : Activity
     {
         private TextView lblUser;
@@ -22,6 +22,7 @@ namespace AppCargoExpressFinal.controller
         private TextView lblPrice;
         private Button btnConfirm;
         private Button btnReturn;
+        private TextView lblInfo;
         private int typeOfUser;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -48,6 +49,9 @@ namespace AppCargoExpressFinal.controller
             lblCargoType = FindViewById<TextView>(Resource.Id.txtPtcCargoType);
             lblPrice = FindViewById<TextView>(Resource.Id.txtPtcValue);
 
+            lblInfo = FindViewById<TextView>(Resource.Id.txtPtcInfo);
+            lblInfo.Text = typeOfUser == 1 ? "Está a punto de adjudicarse el viaje indicado, ¿desea continuar?" : "Está a punto de adjudicarse la carga indicada, ¿desea continuar?";
+
             lblUser.Text = usuario;
             lblDate.Text = fecha;
             lblOriginDestiny.Text = originDestiny;
@@ -67,7 +71,7 @@ namespace AppCargoExpressFinal.controller
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
             var title = "¡¡Felicitaciones!!";
-            var message = "Acabas de adjudicarte la carga, en unos momentos nuestros ejecutivos se contactarán con usted";
+            var message = typeOfUser == 1 ? "Acabas de adjudicarte el viaje, en unos momentos nuestros ejecutivos se contactarán con usted" :"Acabas de adjudicarte la carga, en unos momentos nuestros ejecutivos se contactarán con usted";
             ShowAlert(title, message);
         }
 

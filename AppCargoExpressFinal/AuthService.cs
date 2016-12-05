@@ -133,11 +133,25 @@ namespace AppCargoExpressFinal
                 return (account != null) ? account.Properties["TypOfVehicle"] : null;
             }
         }
+
+        public static float Ranking
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? float.Parse(account.Properties["Ranking"]) : 0f;
+            }
+        }
+
+        public static int EvaluationsNumber
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(Application.Context.ToString()).FirstOrDefault();
+                return (account != null) ? int.Parse(account.Properties["EvaluationsNumber"]) : 0;
+            }
+        }
         #endregion
-
-
-
-
 
         public static void DeleteCredentials()
         {
@@ -160,8 +174,10 @@ namespace AppCargoExpressFinal
             string address,
             string city,    
             int userType,
+            int evaluationsNumber,
             string licenceNumber = "",
-            string typOfVehicle = "")
+            string typOfVehicle = "",
+            float ranking = 0)
         {
             if (!string.IsNullOrWhiteSpace(alias) && !string.IsNullOrWhiteSpace(password) && userType > 0)
             {
@@ -181,6 +197,8 @@ namespace AppCargoExpressFinal
                 account.Properties.Add("UserType", userType.ToString());
                 account.Properties.Add("LicenceNumber", licenceNumber);
                 account.Properties.Add("TypOfVehicle", typOfVehicle);
+                account.Properties.Add("Ranking", ranking.ToString());
+                account.Properties.Add("EvaluationsNumber", evaluationsNumber.ToString());
                 AccountStore.Create(Application.Context).Save(account, Application.Context.ToString());
             }
         }
@@ -200,11 +218,39 @@ namespace AppCargoExpressFinal
                 direccion = Address,
                 comuna = City,
                 tipoUsuario = int.Parse(UserType),
+                cantidadEvaluaciones = EvaluationsNumber,
                 licenceNumber = LicenceNumber,
-                typOfVehicle = TypOfVehicle
+                typOfVehicle = TypOfVehicle,
+                ranking = Ranking
             };
 
             return usuario;
+        }
+
+        public static void SaveCredentials(DataModels.DataModels.Usuario user)
+        {
+            if (!string.IsNullOrWhiteSpace(user.alias) && !string.IsNullOrWhiteSpace(user.contrasena) && user.tipoUsuario > 0)
+            {
+                Account account = new Account
+                {
+                    Username = user.alias
+                };
+                account.Properties.Add("Password", user.contrasena);
+                account.Properties.Add("Name", user.nombre);
+                account.Properties.Add("LastName", user.apellido);
+                account.Properties.Add("PhoneNumber", user.telefonoMovil);
+                account.Properties.Add("CodArea", user.codigoArea);
+                account.Properties.Add("Phone", user.telefonoFijo);
+                account.Properties.Add("Mail", user.mail);
+                account.Properties.Add("Address", user.direccion);
+                account.Properties.Add("City", user.comuna);
+                account.Properties.Add("UserType", user.tipoUsuario.ToString());
+                account.Properties.Add("LicenceNumber", user.licenceNumber);
+                account.Properties.Add("TypOfVehicle", user.typOfVehicle);
+                account.Properties.Add("Ranking", user.ranking.ToString());
+                account.Properties.Add("EvaluationsNumber", user.cantidadEvaluaciones.ToString());
+                AccountStore.Create(Application.Context).Save(account, Application.Context.ToString());
+            }
         }
 
     }

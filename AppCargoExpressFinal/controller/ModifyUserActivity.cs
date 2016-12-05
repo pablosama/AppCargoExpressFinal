@@ -156,20 +156,10 @@ namespace AppCargoExpressFinal.controller
                 RunOnUiThread(() => { progressBar.Hide(); });
                 RunOnUiThread(() => {
                     data.SetUser(user);
-                    AuthService.SaveCredentials(
-                        user.alias,
-                        user.contrasena,
-                        user.nombre,
-                        user.apellido,
-                        user.telefonoMovil,
-                        user.codigoArea,
-                        user.telefonoFijo,
-                        user.mail,
-                        user.direccion,
-                        user.comuna,
-                        user.tipoUsuario,
-                        user.licenceNumber,
-                        user.typOfVehicle);               
+                    user.cantidadEvaluaciones = currentUser.cantidadEvaluaciones;
+                    user.ranking = currentUser.ranking;
+                    AuthService.SaveCredentials(user);
+                                 
                     if(!isValidUser)
                     {
                         Toast.MakeText(this, "Complete los datos del formulario", ToastLength.Long).Show();
@@ -197,6 +187,7 @@ namespace AppCargoExpressFinal.controller
             EditText txtAdress = FindViewById<EditText>(Resource.Id.txtUrAddress);
             Spinner spnCity = FindViewById<Spinner>(Resource.Id.sprUrCity);
 
+
             if (!string.IsNullOrEmpty(txtName.Text.Trim()) && !string.IsNullOrEmpty(txtLastName.Text.Trim()) &&
                !string.IsNullOrEmpty(txtAlias.Text.Trim()) && !string.IsNullOrEmpty(txtMovilPhone.Text.Trim()) &&
                !string.IsNullOrEmpty(txtMail.Text.Trim()) && !string.IsNullOrEmpty(txtAdress.Text.Trim()) &&
@@ -216,8 +207,10 @@ namespace AppCargoExpressFinal.controller
                     DateTime.Now,
                     DateTime.Now,
                     txtPhone2.Text,
+                    currentUser.cantidadEvaluaciones,
                     typeOfUser == 2 ? txtLicenceNumber.Text : "",
-                    typeOfUser == 2 ? spnTypeOfTruck.SelectedItem.ToString() : "");
+                    typeOfUser == 2 ? spnTypeOfTruck.SelectedItem.ToString() : "",
+                    currentUser.ranking);
             }
 
             return model;

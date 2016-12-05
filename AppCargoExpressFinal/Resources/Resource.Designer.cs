@@ -514,6 +514,9 @@ namespace AppCargoExpressFinal
 			// aapt resource value: 0x7f040007
 			public const int PerformedCargoesTitle = 2130968583;
 			
+			// aapt resource value: 0x7f040009
+			public const int PublishedCargoesTitle = 2130968585;
+			
 			// aapt resource value: 0x7f040008
 			public const int PublishedTripTitle = 2130968584;
 			

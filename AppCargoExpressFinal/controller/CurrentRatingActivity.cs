@@ -25,7 +25,7 @@ namespace AppCargoExpressFinal.controller
             txtUser.Text = AuthService.Name + " " + AuthService.LastName;
 
             TextView txtNumEv = FindViewById<TextView>(Resource.Id.txtUcrNumEv);
-            txtNumEv.Text = "26";
+            txtNumEv.Text = AuthService.EvaluationsNumber.ToString();
 
             RatingBar rtgCurrentRating = FindViewById<RatingBar>(Resource.Id.rtgUcrRating);
             rtgCurrentRating.Rating = 4.1f;
