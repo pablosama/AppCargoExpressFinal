@@ -22,6 +22,7 @@ namespace AppCargoExpressFinal.controller
         private Spinner spnDestiny;
         private Spinner spnCargoType;
         private Spinner spnPriceRange;
+        private TextView lblTitle;
         private int typeOfUser;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -49,7 +50,7 @@ namespace AppCargoExpressFinal.controller
         private void BtnPublish_Click(object sender, EventArgs e)
         {
             string title = "¡FELICITACIONES!";
-            string message = "Has publicado la carga";
+            string message = typeOfUser == 1 ?"Has publicado la carga": "Has publicado un viaje";
             ShowAlert(title, message);
         }
 
@@ -61,8 +62,11 @@ namespace AppCargoExpressFinal.controller
             spnDestiny = FindViewById<Spinner>(Resource.Id.sprCpDestiny);
             spnCargoType = FindViewById<Spinner>(Resource.Id.sprCpCargoType);
             spnPriceRange = FindViewById<Spinner>(Resource.Id.sprCpPriceRange);
+            lblTitle = FindViewById<TextView>(Resource.Id.lblCpTitle);
 
-            ArrayAdapter<string> cityAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, DataModels.DataModels.Cities);
+            lblTitle.Text = typeOfUser == 1 ? "PUBLICAR CARGA":"PUBLICAR VIAJE";
+
+            ArrayAdapter <string> cityAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, DataModels.DataModels.Cities);
 
             cityAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spnOrigin.Adapter = cityAdapter;

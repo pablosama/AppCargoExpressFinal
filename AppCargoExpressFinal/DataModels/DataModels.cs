@@ -98,7 +98,7 @@ namespace AppCargoExpressFinal.DataModels
 
         public bool UserExist(string alias, string Name, string lastName)
         {
-            return GetUsuarios().Any(x => x.alias == alias || (x.nombre == Name && x.apellido == lastName));
+            return GetUsuarios().Any(x => x.alias == alias || (Name != string.Empty && lastName != string.Empty && x.nombre == Name && x.apellido == lastName));
         }
 
         public Usuario GetUser(string alias, string password)

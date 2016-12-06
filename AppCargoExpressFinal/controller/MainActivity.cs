@@ -104,17 +104,17 @@ namespace AppCargoExpressFinal.controller
                     progressBar.Show();
                   
                     var dataModels = new DataModels.DataModels();
-                    var userValid = dataModels.UserExist(user, string.Empty, string.Empty);                                
-
+                    var userValid = dataModels.UserExist(user, string.Empty, string.Empty);
+                    var userData = dataModels.GetUser(user, pass);
                     new Thread(new ThreadStart(delegate ()
                     {
                         Thread.Sleep(2000);//timer for loading of 2000ms 
                         RunOnUiThread(() => { progressBar.Hide(); });
-                        RunOnUiThread(() => { Toast.MakeText(this, userValid?"Acceso Exitoso":"Usuario y/o Contraseña incorrecto", ToastLength.Long).Show();                      
+                        RunOnUiThread(() => { Toast.MakeText(this, userValid && userData != null && !string.IsNullOrEmpty(userData.alias) ? "Acceso Exitoso":"Usuario y/o Contraseña incorrecto", ToastLength.Long).Show();                      
                         });
                     })).Start();
                  
-                    if(userValid)
+                    if(userValid && userData != null && !string.IsNullOrEmpty(userData.alias))
                     {
                         new Thread(new ThreadStart(delegate ()
                         {
@@ -124,7 +124,6 @@ namespace AppCargoExpressFinal.controller
                                 //Sending data to another Activity
                                 //TODO: here add service conection for user validation
                                 //if is correct then save the credencials in app
-                                var userData = dataModels.GetUser(user, pass);
                                 AuthService.SaveCredentials(userData);
                              
                                 Intent nextScreen = new Intent(this, typeof(LoginUserActivity));                                                         

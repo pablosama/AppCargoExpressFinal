@@ -98,10 +98,12 @@ namespace AppCargoExpressFinal.controller
             switch (typeOfUser)
             {
                 case 1:
-                    btnBuscarCarga.Visibility = ViewStates.Gone;                  
+                    btnBuscarCarga.Visibility = ViewStates.Gone;
+                    btnPublicarCarga.Text = "Publicar Carga";
                     break;
                 case 2:
-                    btnPublicarCarga.Visibility = ViewStates.Gone;
+                    //btnPublicarCarga.Visibility = ViewStates.Gone;
+                    btnPublicarCarga.Text = "Publicar Viaje";
                     btnBuscarViaje.Visibility = ViewStates.Gone;
                     break;
             }
